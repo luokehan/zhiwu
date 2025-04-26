@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>植物胁迫记忆与预处理的分子机制研究进展</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #5499c7;
+            --accent-color: #a9cce3;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #d5d8dc;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-top: 1.5em;
+            margin-bottom: 0.7em;
+        }
+        
+        h1 {
+            font-size: 2.2em;
+            text-align: center;
+            margin-top: 0.8em;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.3em;
+        }
+        
+        h2 {
+            font-size: 1.7em;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 0.2em;
+        }
+        
+        h3 {
+            font-size: 1.4em;
+        }
+        
+        h4 {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        
+        /* Header Info */
+        .journal-info, .doi-info {
+            text-align: center;
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-bottom: 1em;
+        }
+        
+        .author-info {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        
+        .affiliation {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 2em;
+            font-size: 0.9em;
+        }
+        
+        /* Abstract */
+        .abstract {
+            background-color: var(--light-bg);
+            padding: 1.5em;
+            border-left: 4px solid var(--secondary-color);
+            margin-bottom: 2em;
+            text-align: justify;
+        }
+        
+        .abstract h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+        
+        .keywords {
+            font-style: italic;
+            margin-top: 1em;
+        }
+        
+        /* Main Content */
+        p {
+            text-align: justify;
+            margin-bottom: 1em;
+        }
+        
+        sup {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        /* Lists */
+        ul, ol {
+            padding-left: 2em;
+            margin-bottom: 1em;
+        }
+        
+        li {
+            margin-bottom: 0.5em;
+            text-align: justify;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2em 0;
+            font-size: 0.9em;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow-x: auto;
+            display: block;
+        }
+        
+        thead {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+        
+        tbody tr:nth-of-type(even) {
+            background-color: var(--light-bg);
+        }
+        
+        /* Table Responsiveness */
+        @media (max-width: 767px) {
+            table {
+                font-size: 0.8em;
+            }
+            
+            th, td {
+                padding: 8px 10px;
+            }
+            
+            .table-container {
+                overflow-x: auto;
+                margin-bottom: 1.5em;
+            }
+        }
+        
+        /* References */
+        .references {
+            margin-top: 2em;
+            padding-top: 1em;
+            border-top: 2px solid var(--secondary-color);
+        }
+        
+        .references h2 {
+            margin-bottom: 1em;
+        }
+        
+        .reference-item {
+            margin-bottom: 0.8em;
+            padding-left: 2em;
+            text-indent: -2em;
+            font-size: 0.9em;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 767px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            h3 {
+                font-size: 1.3em;
+            }
+            
+            body {
+                font-size: 15px;
+            }
+            
+            .abstract {
+                padding: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="journal-info">
+            <h4>[期刊名称, 卷号, 期号, 出版年月]</h4>
+        </div>
+        
+        <div class="doi-info">
+            <h4>[DOI (如有)]</h4>
+        </div>
+        
+        <h1>植物胁迫记忆与预处理的分子机制研究进展</h1>
+        
+        <div class="author-info">
+            <p>[作者1姓名], [作者2姓名], [作者n姓名]</p>
+        </div>
+        
+        <div class="affiliation">
+            <p>([作者1单位全称, 地址, 邮编]; [作者2单位全称, 地址, 邮编])</p>
+        </div>
+        
+        <div class="abstract">
+            <h3>摘要</h3>
+            <p>植物在其生命周期中频繁遭遇各种环境胁迫，严重影响其生长发育和产量。为了适应波动的环境，植物进化出了胁迫记忆与预处理（或称"启动"）机制，即通过"记住"先前的胁迫经历，在再次遭遇胁迫时能够做出更快、更强的适应性反应<sup>1</sup>。本文综述了植物胁迫记忆与预处理的核心分子机制，重点探讨了表观遗传调控（包括DNA甲基化、组蛋白修饰和非编码RNA）、信号转导通路（涉及植物激素、活性氧等信号分子）以及转录调控网络在这一过程中的复杂作用<sup>3</sup>。表观遗传修饰通过改变染色质结构和基因可及性，在胁迫记忆的建立、维持乃至跨代遗传中扮演关键角色<sup>3</sup>。信号转导通路感知胁迫信号并将其传递至下游，触发相应的防御反应，并可能诱导持久的表观遗传变化<sup>5</sup>。非编码RNA（如miRNA, siRNA, lncRNA）通过转录后基因沉默、RNA导向的DNA甲基化（RdDM）等途径精细调控胁迫响应基因的表达，参与胁迫记忆的形成与维持<sup>3</sup>。未来的研究需要更深入地整合多组学数据，揭示不同分子层级（表观遗传、转录、代谢）之间的相互作用网络，阐明胁迫记忆的精确调控机制、重置机制以及相关的适合度成本。利用基因编辑等新技术进行表观遗传编辑，有望为培育高抗逆作物提供新策略<sup>3</sup>。</p>
+            
+            <p class="keywords"><strong>关键词:</strong> 植物胁迫记忆; 预处理; 表观遗传学; 信号转导; 非编码RNA; 作物抗逆性</p>
+        </div>
+        
+        <div class="abstract">
+            <h3>Abstract</h3>
+            <p>Plants frequently encounter various environmental stresses throughout their life cycle, significantly impacting growth, development, and yield. To adapt to fluctuating environments, plants have evolved mechanisms of stress memory and priming, allowing them to "remember" previous stress exposure and mount faster and stronger adaptive responses upon subsequent encounters.<sup>1</sup> This review summarizes the core molecular mechanisms underlying plant stress memory and priming, focusing on the intricate roles of epigenetic regulation (including DNA methylation, histone modifications, and non-coding RNAs), signal transduction pathways (involving phytohormones, reactive oxygen species, and other signaling molecules), and transcriptional regulatory networks.<sup>3</sup> Epigenetic modifications alter chromatin structure and gene accessibility, playing key roles in the establishment, maintenance, and even transgenerational inheritance of stress memory.<sup>3</sup> Signal transduction pathways perceive stress signals and relay them downstream, triggering appropriate defense responses and potentially inducing lasting epigenetic changes.<sup>5</sup> Non-coding RNAs (e.g., miRNAs, siRNAs, lncRNAs) fine-tune the expression of stress-responsive genes through mechanisms like post-transcriptional gene silencing and RNA-directed DNA methylation (RdDM), participating in the formation and maintenance of stress memory.<sup>3</sup> Future research needs to further integrate multi-omics data to unravel the interaction networks between different molecular levels (epigenetics, transcription, metabolism), elucidate the precise regulatory mechanisms of stress memory, its resetting mechanisms, and associated fitness costs. Utilizing new technologies like genome editing for epigenetic manipulation holds promise for developing stress-resilient crops.<sup>3</sup></p>
+            
+            <p class="keywords"><strong>Keywords:</strong> Plant stress memory; Priming; Epigenetics; Signal transduction; Non-coding RNA; Crop resilience</p>
+        </div>
+        
+        <h2>引言</h2>
+        <p>植物作为固着生活的生物体，在其整个生命周期中，不可避免地会遭遇到各种环境胁迫，包括干旱、高温、低温、盐渍、养分缺乏以及病原体和害虫的侵袭等生物和非生物胁迫因素<sup>10</sup>。这些胁迫不仅严重制约着植物的正常生长和发育过程，降低作物的产量和品质，也对全球粮食安全和农业的可持续发展构成了严峻的挑战<sup>3</sup>。尽管传统的育种方法，如杂交育种和诱变育种，在提高作物对某些胁迫的耐受性方面取得了一定的成效，但面对日益加剧的气候变化所带来的更频繁、更剧烈的极端环境事件，这些传统方法往往显得力不从心<sup>9</sup>。因此，深入理解植物自身应对环境胁迫的内在机制，探索和发掘植物适应环境波动的新策略，已成为当前植物科学研究的迫切需求。</p>
+        
+        <p>近年来，越来越多的证据表明，植物并非仅仅被动地承受环境压力，它们拥有一种独特的能力，能够"学习"并"记忆"先前所经历的胁迫事件<sup>4</sup>。这种现象被定义为"植物胁迫记忆"（Plant Stress Memory, PSM）<sup>10</sup>。胁迫记忆的核心意义在于，它能够使植物在未来再次遭遇相同或相似的胁迫条件时，启动一种更为迅速、更为强烈或更为高效的防御或适应性反应，这一过程则被称为"预处理"或"启动效应"（Priming）<sup>4</sup>。预处理可以被视为胁迫记忆在功能层面上的一种积极表现，是植物在长期进化过程中形成的一种重要的适应性策略<sup>2</sup>。</p>
+        
+        <p>植物胁迫记忆与预处理现象的背后，是极其复杂的分子调控网络在精确运作。目前的研究揭示，其核心机制主要涵盖以下几个层面：首先是<strong>表观遗传调控</strong>，这包括DNA（脱氧核糖核酸）序列本身不发生改变，但基因表达活性发生可遗传变化的调控方式，主要涉及DNA甲基化、组蛋白的翻译后修饰、染色质结构的重塑以及各类非编码RNA（non-coding RNAs, ncRNAs）的调控作用<sup>3</sup>。这些表观遗传标记如同在基因组上留下的"分子印记"，能够相对稳定地记录下胁迫经历，影响基因的表达模式<sup>3</sup>。其次是<strong>信号感知与转导</strong>系统，植物细胞通过感受器感知外界胁迫信号，并借助一系列信号分子，如植物激素（脱落酸ABA、水杨酸SA、茉莉酸JA、乙烯ET等）、活性氧（Reactive Oxygen Species, ROS）、一氧化氮（NO）、钙离子（Ca<sup>2+</sup>）等，将信号逐级传递，最终激活下游的防御或适应反应<sup>5</sup>。这些信号通路不仅介导即时的胁迫响应，还可能与表观遗传修饰系统发生相互作用，诱导产生持久的表观遗传变化<sup>4</sup>。最后是<strong>转录与代谢重编程</strong>，胁迫会诱导特定的转录因子（如热激转录因子HSFs、冷响应转录因子CBFs等）的激活或抑制，从而大规模地调控下游基因的表达<sup>5</sup>。同时，植物的代谢途径也会发生显著改变，积累特定的代谢产物（如脯氨酸、可溶性糖、次生代谢物等），这些代谢物不仅直接参与胁迫防护，其积累状态也可能构成记忆的一部分<sup>4</sup>。</p>
+        
+        <p>深入剖析植物胁迫记忆与预处理的分子机制，具有极其重要的理论和实践意义。在理论层面，它有助于我们揭开植物适应复杂多变环境的奥秘，理解生物体记忆现象的多样性及其进化意义。在实践层面，这些知识为我们开辟了新的途径，例如，通过人工诱导植物产生预处理状态，或利用分子设计育种、乃至新兴的表观遗传编辑技术，来定向改良作物的抗逆能力，从而提高作物产量，保障全球粮食安全，促进农业的可持续发展<sup>3</sup>。本文旨在系统梳理近年来在植物胁迫记忆与预处理分子机制研究领域取得的主要进展，重点阐述表观遗传调控、信号转导网络以及RNA调控等核心环节的作用及其相互关联，探讨这些机制在植物适应环境胁迫中的具体功能，并对该领域未来的研究方向和潜在的应用前景进行展望。</p>
+        
+        <h2>1. 胁迫记忆与预处理的表观遗传调控机制 (Epigenetic Regulation Mechanisms)</h2>
+        
+        <p>表观遗传调控是指在不改变DNA序列的前提下，通过修饰DNA或其关联蛋白（如组蛋白）来调控基因表达活性的机制，这些修饰在一定条件下可以稳定遗传<sup>10</sup>。在植物胁迫记忆与预处理中，表观遗传机制扮演着核心角色，它能够将瞬时的胁迫信号转化为相对持久的分子标记，从而建立和维持记忆状态<sup>1</sup>。</p>
+        
+        <h3>1.1 DNA甲基化修饰及其动态调控 (DNA Methylation and its Dynamic Regulation)</h3>
+        
+        <p>DNA甲基化是植物基因组中最常见、研究最为深入的一种表观遗传修饰，主要指在DNA甲基转移酶（DNA methyltransferases, DNMTs）的催化下，在胞嘧啶（C）的第5位碳原子上添加一个甲基基团（-CH3）形成5-甲基胞嘧啶（5mC）<sup>5</sup>。在植物中，DNA甲基化可以发生在三种不同的序列背景下：CG、CHG（其中H代表A、C或T）和CHH<sup>5</sup>。不同序列背景下的甲基化建立和维持机制有所不同，例如，CG甲基化主要由MET1（相当于哺乳动物的DNMT1）在DNA复制后维持，具有较高的稳定性；CHG甲基化主要由染色质甲基转移酶CMT3维持，常与组蛋白H3K9甲基化关联；而CHH甲基化则主要通过RNA导向的DNA甲基化（RNA-directed DNA methylation, RdDM）途径建立和维持，涉及DRM2甲基转移酶和小RNA（siRNA）的参与<sup>5</sup>。DNA甲基化通常与基因表达的抑制相关，它可以通过阻止转录因子与DNA结合，或者招募抑制性蛋白复合物来改变染色质结构，从而实现对基因（尤其是转座元件和重复序列）的沉默<sup>3</sup>。</p>
+        
+        <p>环境胁迫，无论是干旱、盐渍、高温、低温等非生物胁迫，还是病原体入侵等生物胁迫，都能够诱导植物基因组范围内DNA甲基化水平和模式发生显著的动态变化<sup>3</sup>。这种变化是植物响应胁迫、建立记忆的重要分子基础<sup>10</sup>。例如，胁迫可以诱导特定基因启动子区域的超甲基化，这可能有助于抑制那些使植物易感胁迫的基因（susceptibility genes）的表达，或者抑制转座元件（Transposable Elements, TEs）的活性，维持基因组稳定性<sup>3</sup>。相反，胁迫也可能诱导某些关键防御基因或胁迫响应基因启动子区域的低甲基化（去甲基化），从而解除这些基因的沉默状态，使其能够快速、高效地表达，以应对胁迫挑战<sup>3</sup>。拟南芥（<em>Arabidopsis thaliana</em>）中，热胁迫可以诱导<em>ONSEN</em>等热响应性反转录转座子的激活，这与其启动子区域的DNA甲基化水平降低密切相关<sup>5</sup>。而在植物抗病反应中，病原体入侵可以触发防御相关基因（如<em>PR</em>基因）启动子的去甲基化，增强其表达水平，从而启动有效的免疫反应<sup>3</sup>。</p>
+        
+        <p>DNA甲基化的动态调控是由DNA甲基转移酶（负责建立和维持甲基化）和DNA去甲基化酶（负责主动移除甲基基团）共同协作完成的<sup>19</sup>。植物中主要的去甲基化酶家族包括DME（DEMETER）和ROS1（REPRESSOR OF SILENCING 1）等，它们能够通过碱基切除修复途径移除5mC<sup>20</sup>。胁迫条件下，这些酶的表达或活性可能发生改变，从而导致特定位点甲基化状态的快速调整<sup>11</sup>。</p>
+        
+        <p>DNA甲基化不仅参与了植物对胁迫的即时响应，更重要的是，它被认为是胁迫记忆，特别是长期记忆和跨代记忆的关键载体<sup>11</sup>。胁迫诱导产生的DNA甲基化模式改变，在胁迫解除后可能并不会完全恢复到初始状态，而是部分地得以保留，形成一种稳定的"记忆印记"<sup>11</sup>。这种印记使得植物在再次遭遇相同胁迫时，能够更快地"回忆"起之前的状态，并作出更有效的响应。例如，在水稻（<em>Oryza sativa</em>）中，经历过干旱胁迫的植株，其基因组中某些区域的DNA甲基化水平发生了改变，这些改变在胁迫解除、植株恢复生长后仍然存在，并且可以稳定地传递给下一代。携带这些"干旱记忆"印记的子代水稻，在面临干旱胁迫时表现出更强的耐受性<sup>20</sup>。</p>
+        
+        <p>值得注意的是，DNA甲基化的动态性与稳定性之间存在一种精妙的平衡。一方面，甲基化模式需要足够稳定，才能作为记忆的载体，甚至实现跨代遗传<sup>20</sup>。另一方面，植物也需要具备清除或重置这些记忆印记的能力，因为持续维持胁迫响应状态可能带来不必要的能量消耗或生长抑制（适合度成本）<sup>20</sup>。例如，在某些发育阶段（如配子发生或早期胚胎发育），存在主动的表观遗传重编程过程，会清除大部分体细胞时期的表观遗传标记<sup>5</sup>。DNA去甲基化酶DME在这一过程中扮演重要角色<sup>20</sup>。这种"写入"与"擦除"之间的平衡，确保了胁迫记忆的适应性价值，使其能够根据环境变化进行调整，而不是简单地累积胁迫留下的"伤疤"。</p>
+        
+        <p>此外，转座元件（TEs）在胁迫记忆中的作用也日益受到关注。TEs占据了植物基因组的很大比例，其活性通常受到DNA甲基化等表观遗传机制的严格抑制，以维持基因组的稳定<sup>19</sup>。然而，多种环境胁迫已被证明可以诱导TEs区域的甲基化水平发生变化，甚至导致部分TEs被重新激活<sup>5</sup>。这种胁迫诱导的TE活性变化及其伴随的表观遗传标记改变，可能不仅仅是被动的响应，而是在胁迫记忆网络中扮演着积极的角色。TEs可能作为一种"应激信号放大器"，其激活可以快速影响邻近基因的表达；或者作为一种"记忆存储器"，其表观遗传状态的改变可以长期保留胁迫信息<sup>5</sup>。通过RdDM途径，TEs相关的siRNA还可能介导这些表观遗传变化的跨代传递<sup>11</sup>。因此，TEs及其表观遗传调控，可能是理解胁迫记忆形成、维持和遗传的关键环节。</p>
+        
+        <h3>1.2 组蛋白修饰与染色质重塑 (Histone Modifications and Chromatin Remodeling)</h3>
+        
+        <p>真核生物的DNA并非裸露存在，而是与组蛋白（主要是H2A, H2B, H3, H4四种核心组蛋白）紧密缠绕，形成称为核小体的基本结构单位。核小体进一步折叠压缩，构成染色质<sup>24</sup>。染色质的结构状态（紧密或松散）直接影响了DNA的可及性，从而调控基因的转录活性。组蛋白的翻译后修饰（Post-translational modifications, PTMs）是调控染色质结构和功能的核心机制之一<sup>3</sup>。这些修饰主要发生在组蛋白N端或C端伸出的"尾巴"上，种类繁多，包括乙酰化（acetylation）、甲基化（methylation）、磷酸化（phosphorylation）、泛素化（ubiquitination）、SUMO化（sumoylation）等<sup>3</sup>。</p>
+        
+        <p>不同的组蛋白修饰具有不同的功能含义，它们共同构成了一套复杂的"组蛋白密码"（histone code），精细地调控着基因表达<sup>24</sup>。例如，组蛋白乙酰化（如H3K9ac, H3K14ac）通常由组蛋白乙酰转移酶（Histone Acetyltransferases, HATs）催化，能够中和组蛋白尾部赖氨酸残基的正电荷，减弱其与DNA的结合，使染色质结构变得松散，有利于转录因子和RNA聚合酶的结合，从而激活基因表达<sup>3</sup>。相反，组蛋白去乙酰化酶（Histone Deacetylases, HDACs）则移除乙酰基，使染色质凝集，抑制基因转录<sup>3</sup>。组蛋白甲基化则更为复杂，其效果取决于被修饰的氨基酸残基（如赖氨酸K或精氨酸R）、修饰位点以及甲基化的程度（单甲基化、二甲基化或三甲基化）<sup>3</sup>。例如，H3K4me3和H3K36me3通常与基因激活相关，而H3K9me2/3和H3K27me3则主要与基因沉默和异染色质形成有关<sup>3</sup>。这些修饰由组蛋白甲基转移酶（Histone Methyltransferases, HMTs）和组蛋白去甲基化酶（Histone Demethylases, HDMs）动态调控<sup>24</sup>。</p>
+        
+        <p>与DNA甲基化类似，环境胁迫也能诱导组蛋白修饰模式发生广泛而动态的变化，这是植物适应胁迫和形成记忆的重要环节<sup>3</sup>。胁迫信号可以激活或抑制特定的组蛋白修饰酶，导致胁迫响应基因区域的组蛋白标记发生改变，进而调控这些基因的表达<sup>3</sup>。例如，在拟南芥中，热胁迫能够诱导热激蛋白（Heat Shock Proteins, HSPs）基因启动子区域H3K4me3和H3K9ac水平的快速升高，促进HSPs的表达以保护细胞免受损伤<sup>11</sup>。更重要的是，某些组蛋白修饰被认为在胁迫记忆的维持中扮演关键角色<sup>5</sup>。例如，对于一些具有"记忆"功能的基因（memory genes），如拟南芥中的<em>HSP22.0</em>和<em>APX2</em>，在经历初次热胁迫后，即使胁迫解除，其启动子区域的H3K4me3标记仍能维持在较高水平。当植物再次遭遇热胁迫时，这些预先存在的"激活"标记使得基因能够更快、更强地被重新激活，表现出明显的预处理效应<sup>5</sup>。类似地，冷胁迫可以诱导冷响应基因（如<em>COR</em>基因）区域H3K27me3（抑制性标记）水平的降低，这种状态在恢复常温后也能部分维持，有助于植物的冷驯化记忆<sup>5</sup>。春化作用（vernalization）是植物感受长期低温并促进春季开花的现象，其核心机制就是低温诱导开花抑制基因<em>FLC</em>位点H3K27me3标记的积累和稳定维持，这是一种经典的基于组蛋白修饰的长期胁迫记忆<sup>5</sup>。</p>
+        
+        <p>除了组蛋白修饰，染色质重塑（chromatin remodeling）也在胁迫响应和记忆中发挥作用。染色质重塑因子是一些ATP依赖的蛋白复合体（如SWI/SNF复合体），它们能够利用ATP水解的能量来移动、移除或重构核小体，从而改变特定基因组区域的DNA可及性<sup>19</sup>。胁迫可以诱导染色质重塑因子的招募或活性改变，参与调控胁迫响应基因的表达<sup>22</sup>。此外，一些染色质重塑因子，如DDM1（DECREASE IN DNA METHYLATION 1）和MOM1（MORPHEUS' MOLECULE 1），不仅参与DNA甲基化的调控，还在胁迫诱导的表观遗传状态重置中发挥关键作用<sup>21</sup>。研究发现，在<em>ddm1 mom1</em>双突变体中，胁迫诱导的基因表达变化在胁迫解除后更难恢复到初始状态，表明DDM1和MOM1参与了"擦除"胁迫记忆的过程，防止记忆的过度累积或错误传递<sup>23</sup>。</p>
+        
+        <p>组蛋白修饰通常被认为比DNA甲基化更具动态性，可能在短期胁迫记忆和预处理状态的快速建立中发挥更直接的作用<sup>5</sup>。组蛋白修饰的多样性和组合性（即"组蛋白密码"）为编码复杂的胁迫信息提供了巨大的潜力。不同的胁迫类型（如热、冷、干旱、盐）或胁迫强度可能会诱导产生不同的组蛋白修饰谱，形成特定的"胁迫印记"<sup>5</sup>。这使得植物可能能够区分并"记住"不同类型的胁迫，并在后续响应中表现出一定的特异性，而不仅仅是简单的"开"或"关"的反应<sup>1</sup>。</p>
+        
+        <p>同时，组蛋白修饰与DNA甲基化之间存在着密切而复杂的相互作用（crosstalk），它们并非独立运作，而是协同构建了胁迫记忆的表观遗传基础<sup>19</sup>。例如，某些组蛋白修饰（如H3K9me2）可以作为"路标"，引导DNA甲基转移酶（如CMT3）到特定区域进行CHG甲基化<sup>19</sup>。反过来，DNA甲基化状态也能影响组蛋白修饰酶的招募和活性，或者通过招募甲基化DNA结合蛋白来影响染色质结构<sup>21</sup>。在胁迫响应过程中，经常观察到DNA甲基化和组蛋白修饰在特定基因区域发生协同变化<sup>3</sup>。这种相互依赖的网络共同决定了染色质的高级结构和基因的表达状态，从而赋予了胁迫记忆所需的稳定性和可塑性。</p>
+        
+        <h3>1.3 非编码RNA介导的表观遗传调控 (Non-coding RNA-mediated Epigenetic Regulation)</h3>
+        
+        <p>除了对DNA和组蛋白的直接修饰外，非编码RNA（non-coding RNAs, ncRNAs）也在植物胁迫响应和表观遗传记忆中扮演着日益重要的调控角色<sup>3</sup>。ncRNAs是指那些不编码蛋白质，但在基因表达调控中发挥功能的RNA分子。根据长度，它们通常被分为小RNA（small RNAs, sRNAs, 长度约20-30核苷酸）和长非编码RNA（long non-coding RNAs, lncRNAs, 长度大于200核苷酸）<sup>7</sup>。</p>
+        
+        <p>小RNA主要包括微小RNA（microRNAs, miRNAs）和小干扰RNA（small interfering RNAs, siRNAs）两大类<sup>3</sup>。miRNAs通常由内源基因转录产生，形成发夹结构前体，经过Dicer-like 1（DCL1）等酶加工成熟。成熟的miRNA加载到ARGONAUTE（AGO）蛋白（主要是AGO1）上，形成RNA诱导的沉默复合体（RISC），通过碱基互补配对的方式识别靶标mRNA，并在转录后水平抑制其表达，通常是通过切割mRNA或抑制其翻译<sup>3</sup>。许多miRNAs的表达水平在胁迫条件下会发生显著变化，它们通过调控各自的靶基因（通常是转录因子、胁迫响应蛋白等），参与到干旱、盐、温度、养分胁迫以及病原体防御等多种响应过程中<sup>3</sup>。例如，一些干旱响应的miRNAs可以调控与渗透调节、气孔运动相关的基因<sup>7</sup>。</p>
+        
+        <p>siRNAs的来源和功能则更为多样。它们可以来源于双链RNA前体、反转录转座子、重复序列、病毒RNA或特定基因转录本等，由不同的DCL酶（DCL2, DCL3, DCL4）加工产生<sup>7</sup>。siRNAs的一个关键功能是介导RNA导向的DNA甲基化（RdDM）途径<sup>5</sup>。在该途径中，24-nt siRNAs（主要由DCL3加工）被加载到AGO4（或AGO6/9）蛋白上，引导RdDM复合体（包括RNA聚合酶IV和V、DRM2甲基转移酶等）到与其序列互补的基因组位点，催化该位点的从头DNA甲基化（主要是CHH甲基化，也涉及CG和CHG甲基化），并可能伴随组蛋白修饰的改变，最终导致靶位点的转录基因沉默（Transcriptional Gene Silencing, TGS）<sup>7</sup>。RdDM途径对于抑制转座子活性、维持基因组稳定至关重要，并且在植物响应环境胁迫、建立和维持表观遗传记忆，特别是跨代记忆中发挥着核心作用<sup>3</sup>。例如，胁迫可以诱导产生新的siRNAs，这些siRNAs通过RdDM途径改变特定基因或TEs的甲基化状态，这种改变可能在胁迫解除后得以维持，甚至通过配子传递给下一代<sup>7</sup>。</p>
+        
+        <p>长非编码RNA（lncRNAs）是一类功能异质性很高的ncRNAs，它们可以通过多种机制参与基因表达调控<sup>7</sup>。lncRNAs可以作为分子"支架"，组装调控蛋白复合体；可以作为"诱饵"，结合并隔离miRNAs或蛋白质；也可以作为"引导者"，将染色质修饰复合体招募到特定的基因组位点<sup>7</sup>。在植物胁迫响应和记忆中，lncRNAs的作用也逐渐被揭示。一个经典的例子是拟南芥的春化过程，其中多个冷诱导的lncRNAs，如<em>COOLAIR</em>（反义转录本）、<em>COLDAIR</em>（内含子转录本）和<em>COLDWRAP</em>（启动子相关转录本），参与了对开花抑制基因<em>FLC</em>的表观遗传沉默<sup>5</sup>。它们通过不同的机制，如影响组蛋白修饰（<em>COOLAIR</em>可能影响H3K36me3）或招募PRC2复合体（<em>COLDAIR</em>和<em>COLDWRAP</em>可能与PRC2互作，促进H3K27me3的建立和维持），共同确保了对低温经历的长期记忆<sup>5</sup>。此外，lncRNAs也被发现参与调控干旱、盐等其他胁迫响应和记忆过程<sup>7</sup>。</p>
+        
+        <p>综合来看，ncRNAs构成了连接环境胁迫信号、基因表达调控和表观遗传修饰的关键分子网络<sup>3</sup>。它们不仅参与即时的胁迫响应，还能通过介导或稳定表观遗传标记，为胁迫记忆的建立和维持做出贡献<sup>3</sup>。特别是siRNAs，由于其在RdDM途径中的核心作用以及潜在的可移动性，被认为是介导系统性获得性抗性（SAR）和跨代胁迫记忆的重要候选分子<sup>7</sup>。胁迫诱导产生的特定siRNAs可能作为一种移动的表观遗传信号，在植物体内长距离运输，甚至进入生殖细胞，从而将胁迫信息传递到远端组织或下一代，这为理解这些宏观生物学现象提供了可能的分子机制<sup>14</sup>。</p>
+        
+        <p>同时，ncRNA网络与经典的表观遗传标记（DNA甲基化、组蛋白修饰）之间并非单向的调控关系，而是形成了一个复杂的调控回路<sup>7</sup>。一方面，ncRNAs（特别是siRNAs）可以指导DNA甲基化和组蛋白修饰的建立<sup>19</sup>。另一方面，基因组的表观遗传状态（如甲基化水平、染色质开放性）也会反过来影响ncRNA自身的转录、加工和稳定性<sup>7</sup>。lncRNAs则可以直接招募或调控染色质修饰酶的活性<sup>5</sup>。这种相互依赖、相互反馈的调控网络，共同塑造了胁迫记忆的特异性（对不同胁迫产生不同响应）、持久性（记忆维持的时间长度）和可塑性（记忆的建立与重置）。</p>
+        
+        <div class="table-container">
+            <table>
+                <caption>表1: 胁迫记忆中的关键表观遗传调控因子及其作用</caption>
+                <thead>
+                    <tr>
+                        <th>表观遗传机制</th>
+                        <th>关键分子/因子 (示例)</th>
+                        <th>主要作用</th>
+                        <th>相关胁迫类型 (示例)</th>
+                        <th>参考文献 (示例)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DNA甲基化 (CG)</td>
+                        <td>MET1</td>
+                        <td>维持CG甲基化, 基因沉默, 跨代遗传稳定性</td>
+                        <td>通用</td>
+                        <td><sup>19</sup></td>
+                    </tr>
+                    <tr>
+                        <td>DNA甲基化 (CHG)</td>
+                        <td>CMT3, H3K9 HMTs (如KYP)</td>
+                        <td>维持CHG甲基化 (常与H3K9me关联), TE沉默</td>
+                        <td>通用, 胁迫响应</td>
+                        <td><sup>19</sup></td>
+                    </tr>
+                    <tr>
+                        <td>DNA甲基化 (CHH)</td>
+                        <td>DRM2, RdDM途径 (Pol IV, Pol V, RDR2, DCL3, AGO4/6)</td>
+                        <td>从头建立CHH甲基化, TE沉默, 胁迫诱导的甲基化变化, 可能参与跨代记忆</td>
+                        <td>通用, 胁迫响应, 热, 干旱</td>
+                        <td><sup>5</sup></td>
+                    </tr>
+                    <tr>
+                        <td>DNA去甲基化</td>
+                        <td>DME, ROS1</td>
+                        <td>主动移除甲基化, 基因激活, 表观遗传重编程 (如配子发生), 记忆擦除</td>
+                        <td>通用, 发育, 胁迫响应, 盐</td>
+                        <td><sup>20</sup></td>
+                    </tr>
+                    <tr>
+                        <td>组蛋白乙酰化</td>
+                        <td>HATs (如HAC1), HDACs (如HDA6)</td>
+                        <td>基因激活 (HATs) / 抑制 (HDACs), 染色质开放/关闭, 短期记忆, 快速响应</td>
+                        <td>冷, 热, 干旱, 盐, 病原体</td>
+                        <td><sup>3</sup></td>
+                    </tr>
+                    <tr>
+                        <td>组蛋白甲基化 (H3K4me3)</td>
+                        <td>HMTs (如ATX1), HDMs</td>
+                        <td>基因激活标记, 胁迫记忆维持 (特别是热、干旱), 预处理状态</td>
+                        <td>热, 干旱, 冷, 盐, 病原体</td>
+                        <td><sup>3</sup></td>
+                    </tr>
+                    <tr>
+                        <td>组蛋白甲基化 (H3K27me3)</td>
+                        <td>PRC2复合体 (如CLF, SWN), HDMs (如REF6)</td>
+                        <td>基因抑制标记, 发育调控, 长期记忆 (如春化), 胁迫响应基因沉默</td>
+                        <td>冷 (春化), 热, 干旱, 盐</td>
+                        <td><sup>3</sup></td>
+                    </tr>
+                    <tr>
+                        <td>染色质重塑</td>
+                        <td>SWI/SNF复合体 (如BRM), DDM1, MOM1</td>
+                        <td>调节核小体位置/密度, 影响DNA可及性, 参与胁迫响应, 记忆维持与重置</td>
+                        <td>热, 通用胁迫响应</td>
+                        <td><sup>19</sup></td>
+                    </tr>
+                    <tr>
+                        <td>miRNAs</td>
+                        <td>DCL1, AGO1, 特定miRNAs (如miR156, miR398)</td>
+                        <td>转录后基因沉默 (切割mRNA或抑制翻译), 调控胁迫响应通路, 可能参与短期记忆</td>
+                        <td>热, 干旱, 盐, 氧化, 病原体</td>
+                        <td><sup>3</sup></td>
+                    </tr>
+                    <tr>
+                        <td>siRNAs (RdDM)</td>
+                        <td>DCL3, AGO4, RdDM途径组分</td>
+                        <td>介导DNA甲基化和TGS, TE沉默, 建立和维持表观遗传记忆, 可能介导跨代记忆和SAR</td>
+                        <td>通用, 胁迫响应, 热, UVC</td>
+                        <td><sup>3</sup></td>
+                    </tr>
+                    <tr>
+                        <td>lncRNAs</td>
+                        <td>特定lncRNAs (如COOLAIR, COLDAIR)</td>
+                        <td>多种调控机制 (支架, 诱饵, 引导), 参与染色质修饰和基因表达调控, 长期记忆</td>
+                        <td>冷 (春化), 干旱</td>
+                        <td><sup>5</sup></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><small>*注：此表为示例性总结，具体分子和作用可能因植物种类和胁迫条件而异。</small></p>
+        
+        <h2>2. 胁迫记忆与预处理中的信号感知与转导 (Signal Perception and Transduction)</h2>
+        
+        <p>植物要形成胁迫记忆，首先必须能够感知环境胁迫信号，并将这些信号通过复杂的信号转导网络传递到细胞核，最终引起基因表达和生理状态的改变。多种信号分子和信号通路参与了这一过程，它们不仅介导即时的胁迫响应，也为记忆的建立奠定基础。</p>
+        
+        <h3>2.1 植物激素信号通路的作用 (Role of Phytohormone Signaling Pathways - ABA, SA, etc.)</h3>
+        
+        <p>植物激素是调节植物生长发育和环境适应性的关键内源信号分子，在胁迫记忆和预处理中发挥着不可或缺的作用<sup>4</sup>。其中，脱落酸（Abscisic Acid, ABA）、水杨酸（Salicylic Acid, SA）、茉莉酸（Jasmonic Acid, JA）和乙烯（Ethylene, ET）等是研究最为广泛的胁迫相关激素。</p>
+        
+        <p>ABA通常被认为是响应干旱、高盐、低温等非生物胁迫的核心激素<sup>4</sup>。当植物感受到水分亏缺或高盐胁迫时，ABA生物合成途径被激活，导致内源ABA水平迅速升高。ABA信号通过其受体（PYR/PYL/RCAR蛋白）、负调控因子（PP2C磷酸酶）和正调控因子（SnRK2激酶）构成的核心信号通路进行传递，最终激活下游的转录因子（如AREB/ABF），诱导一系列响应基因的表达，促进气孔关闭以减少水分蒸腾，积累渗透保护物质（如脯氨酸、可溶性糖）以维持细胞膨压，并调控根系生长等<sup>25</sup>。研究表明，ABA信号通路也参与了胁迫记忆的形成，例如，反复干旱胁迫处理可以诱导ABA响应基因的记忆性表达，这可能与这些基因位点的表观遗传状态改变有关<sup>22</sup>。</p>
+        
+        <p>SA主要介导植物对生物营养型病原体（biotrophic pathogens）和某些半生物营养型病原体的防御反应，是诱导系统获得性抗性（Systemic Acquired Resistance, SAR）的关键信号分子<sup>5</sup>。SAR是一种广谱、持久的诱导抗性，表现出典型的防御启动（defense priming）特征<sup>14</sup>。当植物局部受到病原体侵染后，SA信号在病灶部位产生并传递到远端未受侵染的组织，使整个植株进入一种"警戒"状态。在这种状态下，植物对后续的病原体攻击能够做出更快、更强的防御反应，例如，防御相关基因（如<em>PR</em>基因）的表达被启动（primed）<sup>14</sup>。研究发现，SA水平的升高或外源施用SA能够诱导防御基因启动子区域染色质发生有利于转录的修饰，如组蛋白H3和H4的乙酰化水平升高，以及H3K4me3标记的富集，这些表观遗传变化被认为是SA介导的防御记忆的重要分子基础<sup>5</sup>。</p>
+        
+        <p>JA和ET信号通路则主要参与调控植物对死体营养型病原体（necrotrophic pathogens）和植食性昆虫的防御反应，它们之间通常存在协同作用，共同激活相关的防御基因表达<sup>26</sup>。虽然对JA/ET在胁迫记忆中的作用研究相对较少，但也有证据表明它们参与了某些类型的诱导抗性和记忆过程，例如，乙烯信号被发现参与调控拟南芥顶端分生组织的热胁迫记忆<sup>15</sup>。</p>
+        
+        <p>重要的是，这些激素信号通路并非孤立运作，而是构成了一个复杂的网络，彼此之间存在广泛的交互作用（crosstalk），包括协同（synergism）和拮抗（antagonism）关系<sup>26</sup>。例如，SA和JA/ET通路之间经典的拮抗关系，使得植物能够根据入侵病原体的类型（生物营养型 vs 死体营养型）来优化防御策略<sup>26</sup>。这种交互作用不仅决定了植物即时响应的特异性和强度，也深刻影响着胁迫记忆的形成、类型和效果。植物在自然环境中常常同时或相继遭遇多种胁迫，激素信号网络的整合能力对于植物在复杂胁迫条件下做出恰当的反应至关重要<sup>6</sup>。理解这种复杂的信号交互网络，是预测和调控植物在多重胁迫下记忆行为的关键。</p>
+        
+        <p>此外，激素信号的动态变化，包括其浓度、产生部位和作用时间，可能本身就编码了胁迫的强度和持续时间信息，进而影响记忆的形成<sup>4</sup>。例如，预处理状态下的植物在遭遇二次胁迫时，可能会表现出更快或更强的激素（如SA或ABA）合成或信号响应<sup>13</sup>。这提示激素信号的动力学特征可能直接参与了记忆的读取和执行过程，或者作为触发下游更稳定记忆机制（如表观遗传修饰）的关键"开关"或"调节器"。</p>
+        
+        <h3>2.2 活性氧与其他信号分子的调控 (Regulation by ROS and Other Signaling Molecules)</h3>
+        
+        <p>除了植物激素，一些快速产生的小分子信号物质也在胁迫感知和信号转导中扮演着关键角色，其中活性氧（ROS）尤为重要<sup>6</sup>。ROS是一类含氧的、化学性质活泼的分子或离子，主要包括超氧阴离子（O<sub>2</sub>•−）、过氧化氢（H<sub>2</sub>O<sub>2</sub>）、羟基自由基（•OH）和单线态氧（<sup>1</sup>O<sub>2</sub>）等<sup>26</sup>。在正常生理条件下，ROS在细胞内维持在一个较低的稳态水平，参与正常的信号传递。然而，当植物遭受各种生物或非生物胁迫时，细胞内ROS的产生会急剧增加，打破原有的氧化还原平衡，导致氧化应激<sup>6</sup>。</p>
+        
+        <p>过去，ROS主要被视为胁迫造成的有害副产物，因为过量的ROS会损伤DNA、蛋白质和脂质等生物大分子，导致细胞损伤甚至死亡<sup>26</sup>。但现在普遍认为，ROS在胁迫响应中具有双重作用：既是损伤分子，也是重要的信号分子<sup>6</sup>。胁迫诱导的ROS快速爆发（ROS burst）是植物免疫反应（包括PTI和ETI）以及多种非生物胁迫响应中的一个早期、标志性的事件<sup>14</sup>。这些ROS信号可以被细胞感知，并激活下游的信号通路，如MAPK（Mitogen-Activated Protein Kinase）级联通路、钙离子信号通路等，最终导致防御基因的表达和适应性反应的启动<sup>6</sup>。不同类型的ROS（如H<sub>2</sub>O<sub>2</sub> vs <sup>1</sup>O<sub>2</sub>）、产生的亚细胞部位（如叶绿体、线粒体、质膜NADPH氧化酶）以及其浓度和持续时间的动态变化，可能编码了胁迫的特异性信息，介导不同的下游响应<sup>6,28</sup>。</p>
+        
+        <p>叶绿体是ROS产生和信号整合的重要细胞器。光合作用过程中，过剩的光能可能导致<sup>1</sup>O<sub>2</sub>的产生；胁迫条件下，光合电子传递链也可能产生O<sub>2</sub>•−和H<sub>2</sub>O<sub>2</sub><sup>26</sup>。叶绿体产生的ROS以及其他信号分子（如受损蛋白、代谢物）可以通过所谓的"逆行信号"（retrograde signaling）传递到细胞核，调控核基因的表达，协调细胞器的功能与细胞整体的胁迫响应<sup>26</sup>。EXECUTER1 (EX1)蛋白被发现是感受叶绿体中<sup>1</sup>O<sub>2</sub>信号并启动逆行信号通路的关键因子<sup>26,28</sup>。这种叶绿体介导的信号通路在植物免疫和胁迫记忆中发挥着重要作用<sup>1,28</sup>。</p>
+        
+        <p>除了ROS，一氧化氮（Nitric Oxide, NO）也是一种重要的气态信号分子，参与调节植物的多种生理过程，包括胁迫响应和记忆<sup>4</sup>。研究表明，NO参与了拟南芥的热胁迫记忆（thermomemory）的形成，可能通过调控相关基因的表达或与其他信号通路互作来实现<sup>4</sup>。</p>
+        
+        <p>钙离子（Ca<sup>2+</sup>）作为细胞内普遍存在的第二信使，在植物响应各种内外刺激时发挥着核心作用<sup>14</sup>。胁迫信号可以触发细胞质中Ca<sup>2+</sup>浓度的快速、瞬时性升高（形成特定的"钙信号特征"），这些钙信号被钙结合蛋白（如钙调蛋白CaM、钙依赖性蛋白激酶CDPKs）感知，并传递给下游的效应蛋白，如激酶、磷酸酶和转录因子，最终调控基因表达和细胞活动<sup>14</sup>。Ca<sup>2+</sup>信号通路与ROS信号、激素信号等密切互作，共同构成了复杂的胁迫信号网络<sup>26</sup>。</p>
+        
+        <p>ROS、NO、Ca<sup>2+</sup>等这些快速产生的信号分子，构成了胁迫响应的"第一道防线"和信号放大器。它们能够迅速地感知和传递胁迫信息，并通过直接修饰蛋白（如氧化还原修饰）、影响离子通道活性或激活下游激酶级联等方式，快速启动细胞响应<sup>6,29</sup>。同时，这些早期信号也可能触发后续更为持久的响应，如激素的合成与信号传递，以及表观遗传状态的改变，从而在胁迫记忆的启动和建立过程中发挥关键作用<sup>4,6</sup>。</p>
+        
+        <p>由于多种不同的胁迫都能诱导ROS的产生，ROS信号可能扮演着一种"通用胁迫货币"的角色，能够整合来自不同胁迫源的信息<sup>6,29</sup>。细胞通过解读ROS信号的特征（类型、强度、时空动态），并结合其他信号通路的信息，将其转化为特定的下游响应路径，包括是否以及如何形成胁迫记忆<sup>6,28</sup>。</p>
+        
+        <p>此外，胁迫诱导的细胞氧化还原状态（redox homeostasis）的改变，可能不仅仅是瞬时的信号，其本身也可能形成一种长期的"代谢记忆"或"氧化还原印记"<sup>6,29</sup>。预处理可以通过调节植物的抗氧化系统，改变其基础氧化还原状态<sup>4,27</sup>。这种持续性的氧化还原状态改变，可以直接影响许多酶和转录因子的活性，并且与表观遗传调控机制（如组蛋白修饰酶和DNA去甲基化酶的活性）密切相关<sup>6,30</sup>。因此，这种非经典的记忆形式可能直接影响细胞对后续胁迫的敏感性和响应模式。</p>
+        
+        <h3>2.3 关键信号通路整合与互作 (Integration and Crosstalk of Key Signaling Pathways)</h3>
+        
+        <p>植物对环境胁迫的响应并非由单一信号通路独立完成，而是一个高度整合、相互关联的网络调控过程<sup>6,27</sup>。不同的信号通路，包括前面讨论的激素信号（ABA, SA, JA/ET等）、ROS/NO/Ca<sup>2+</sup>等小分子信号，以及由它们激活的下游通路，如MAPK级联通路、钙信号通路，还有针对特定胁迫的响应通路（例如，冷胁迫下的ICE−CBF−COR通路，热胁迫下的HSF−HSP通路），它们之间存在着广泛而复杂的交互作用（crosstalk）<sup>5,6</sup>。这种交互作用是植物能够精确解读环境信息，并根据胁迫的性质（生物vs非生物）、强度、持续时间以及不同胁迫的组合，做出最优化、最适应的生理和分子反应的基础<sup>27,31</sup>。</p>
+        
+        <p>信号通路之间的交互可以发生在多个层面。上游信号分子之间可能相互影响合成或降解（如ABA和GA的拮抗）；信号通路中的关键蛋白（如激酶、磷酸酶、转录因子）可能被多个通路共同调控，或者一个通路的输出会影响另一个通路的活性；不同通路可能最终汇聚到共同的下游效应基因或生理过程上<sup>14,26</sup>。</p>
+        
+        <p>例如，在植物免疫中，由细胞表面受体（PRRs）识别病原相关分子模式（PAMPs）触发的PTI（Pattern−Triggered Immunity）和由细胞内受体（NLRs）识别病原效应子（effectors）触发的ETI（Effector−Triggered Immunity），虽然起始机制不同，但它们在下游共享一些信号组分（如MAPK级联），并且能够相互增强，共同构成统一的植物免疫系统<sup>14</sup>。</p>
+        
+        <p>叶绿体作为环境信号的重要感受器，其发出的逆行信号能够整合光照、温度、水分、病原体侵染等多种信息，并与细胞核中的激素信号通路、转录调控网络等发生复杂的互作，共同调节植物的生长、发育和胁迫响应<sup>26,28</sup>。</p>
+        
+        <p>信号通路的整合与互作对于理解胁迫记忆的特异性、交叉耐受性（cross−tolerance）以及记忆的建立效率至关重要<sup>1,31</sup>。一个特定的胁迫事件可能会同时激活或抑制多个信号通路，植物最终是否形成记忆、形成何种类型的记忆（例如，是针对特定胁迫的特异性记忆，还是广谱的耐受性提升），是这些通路相互作用、相互博弈的综合结果。例如，干旱胁迫主要激活ABA信号通路，但也伴随着ROS水平的升高，ABA和ROS信号可能协同作用，诱导耐旱基因的表达和相关表观遗传标记的建立，从而形成干旱记忆<sup>4,22</sup>。</p>
+        
+        <p>交叉耐受现象，即植物经历一种类型的胁迫后，对另一种不同类型的胁迫也表现出增强的耐受性（例如，干旱预处理提高了对热胁迫或冷胁迫的耐受性），进一步印证了不同胁迫响应通路之间存在共享的信号组分或下游效应机制<sup>31</sup>。识别这些共享的节点对于理解胁迫响应网络的共性，以及开发广谱抗逆策略具有重要意义。</p>
+        
+        <p>在复杂的信号网络中，那些位于通路交叉点或汇聚点的"节点"蛋白，如某些关键的蛋白激酶（如MAPKs, SnRKs, CDPKs）或转录因子（如WRKYs, MYBs, bZIPs），扮演着信号整合和决策的关键角色。它们接收来自上游不同通路的信号输入，其磷酸化状态、亚细胞定位或与其他蛋白的相互作用发生改变，最终决定了下游基因表达谱和生理响应的类型与强度，包括是否启动与记忆相关的表观遗传修饰程序。因此，这些节点蛋白可以被视为调控胁迫记忆形成与否、以及记忆特异性的"分子开关"或"决策点"。靶向调控这些关键节点蛋白的活性或表达，可能成为未来干预和利用植物胁迫记忆的有效策略。</p>
+        
+        <p>此外，胁迫记忆的形成和预处理效应的产生，可能不仅仅是分子水平的简单累积或表观遗传标记的静态存在，还可能涉及到信号通路自身动力学特征的改变。生物信号通路中普遍存在着正反馈和负反馈调控回路，这些回路对于精确控制信号的强度、持续时间和响应速度至关重要。初次胁迫经历，可能通过表观遗传修饰或其他机制，改变了这些反馈回路中关键组分的表达水平或活性状态。例如，如果一个关键的负反馈调节蛋白在预处理状态下表达下调，或者一个关键的正反馈激活蛋白被预先磷酸化或积累，那么当植物再次受到相同刺激时，信号就可能传递得更快、更强。这种基于系统动力学改变的观点，为理解预处理效应（特别是响应速度的提升）提供了一个新的解释框架，补充了传统的分子积累或表观遗传"解锁"模型。</p>
+        
+        <h2>3. 胁迫记忆的建立、维持与应用 (Establishment, Maintenance, and Application of Stress Memory)</h2>
+        
+        <p>胁迫记忆是一个动态的过程，涉及记忆的形成、维持、可能的跨代传递以及最终的应用。理解这些过程对于揭示植物适应机制和开发新的作物改良策略至关重要。</p>
+        
+        <h3>3.1 胁迫记忆的形成与生理表现 (Formation and Physiological Manifestations of Memory - including priming effects)</h3>
+        
+        <p>胁迫记忆的形成过程始于植物对初次胁迫事件的感知和即时响应<sup>1,12</sup>。当胁迫信号被感知并经过信号转导通路传递后，会触发一系列早期的分子调控事件，例如特定转录因子的激活（如热胁迫下的HSFs，冷胁迫下的CBFs）和早期响应基因的表达<sup>5</sup>。如果胁迫持续一定时间或达到一定强度，植物可能会启动更为持久的变化，从而建立起胁迫记忆<sup>2,16</sup>。这些持久变化构成了记忆的物质基础，可能包括：</p>
+        
+        <ol>
+            <li>特定代谢物的积累，如渗透调节物质（脯氨酸、可溶性糖）、抗氧化剂（类黄酮、多酚）或信号分子前体<sup>4,14</sup>；</li>
+            <li>防御相关蛋白的持续性高水平表达或积累，例如病程相关蛋白（PR proteins）、抗氧化酶（如SOD, POD, CAT, APX）、分子伴侣（如HSPs）等<sup>14,27</sup>；</li>
+            <li>关键基因位点（特别是胁迫响应基因和记忆基因）表观遗传标记的建立和维持，如特定的DNA甲基化模式或组蛋白修饰状态（例如，启动子区域富集H3K4me3等激活标记，或去除H3K27me3等抑制标记）<sup>5</sup>。</li>
+        </ol>
+        
+        <p>胁迫记忆建立后，其最主要的生理表现形式就是预处理效应（priming effect）<sup>13,14</sup>。处于预处理状态的植物，在遭遇第二次（触发）胁迫时，其防御或适应反应相比于未经历初次胁迫的"幼稚"（naïve）植物，会表现出更快（启动延迟缩短）和/或更强（响应幅度增大）的特征<sup>13,14</sup>。例如，预处理后的植物可能表现出更迅速、更剧烈的ROS爆发，防御基因的转录激活更快、表达水平更高，抗氧化酶活性提升更显著，或者气孔关闭反应更灵敏等<sup>27,29</sup>。这种增强的响应能力最终通常会转化为更高的胁迫耐受性，例如，植物在二次胁迫下的存活率提高，生长受抑制程度减轻，或者产量损失减少<sup>4,32</sup>。</p>
+        
+        <p>胁迫记忆的形成过程可能存在一种"阈值效应"。并非所有的胁迫经历都能导致持久记忆的形成。短暂或轻微的胁迫可能只引起一过性的生理反应，而不会在分子层面留下稳定的印记<sup>5</sup>。只有当胁迫的强度或持续时间超过某个临界点时，才能有效触发那些能够长期维持的分子变化，如稳定的表观遗传修饰或关键调控蛋白/代谢物的持续积累<sup>16</sup>。这意味着记忆的建立可能是一个非线性的过程，存在一个从简单适应到启动记忆程序的转换点。理解这个阈值对于有效设计和应用预处理策略至关重要，例如，选择合适的预处理强度和持续时间，既能有效启动记忆，又避免对植物造成过度损伤。</p>
+        
+        <p>预处理效应所表现出的"更快"和"更强"的响应特征，可能由不同的潜在分子机制贡献。响应速度的提升（"更快"）可能更多地与信号通路中关键组分的预先积累或处于"待命"状态有关，例如，细胞中已经积累了较高水平的某个关键转录因子或激酶，或者这些分子已经被部分磷酸化修饰，使得信号传递链被有效缩短，能够更快地启动下游反应<sup>13,14</sup>。而响应强度的提升（"更强"）则可能更多地与表观遗传层面的"解锁"有关，即关键的防御或适应基因的染色质结构在预处理状态下变得更为开放，更容易被转录机器接近和激活（例如，启动子区域富集了H3K4me3等激活标记，或清除了H3K27me3等抑制标记），从而使得基因在受到触发信号时能够以更高的效率进行转录<sup>5,11</sup>。因此，预处理效应很可能是多种机制协同作用的结果，不同机制对于响应速度和响应强度的贡献可能有所侧重。</p>
+        
+        <h3>3.2 胁迫记忆的持续性与跨代遗传 (Duration and Transgenerational Inheritance of Memory)</h3>
+        
+        <p>植物胁迫记忆并非一成不变，其持续时间（memory duration）可以从数小时到数天（短期记忆），到数周、数月甚至贯穿整个植物生命周期（长期体细胞记忆），甚至可以传递给后代（跨代记忆）<sup>5</sup>。记忆的持续性与其背后的分子机制密切相关<sup>12</sup>。</p>
+        
+        <p>短期记忆通常被认为主要依赖于一些相对不稳定的分子变化，例如信号分子（如ROS、Ca<sup>2+</sup>）的瞬时积累、某些蛋白质的磷酸化状态改变、或者不稳定的小RNA或mRNA分子的积累<sup>16,27</sup>。这些变化在胁迫解除后会较快地恢复到基线水平，因此记忆持续时间较短。</p>
+        
+        <p>长期体细胞记忆（somatic memory）则通常与更为稳定的分子改变相关，特别是表观遗传修饰的建立和维持<sup>1,5</sup>。如前所述，DNA甲基化模式的改变和某些特定的组蛋白修饰（如H3K27me3介导的春化记忆，H3K4me3介导的热胁迫记忆）可以在细胞分裂过程中稳定遗传（mitotic inheritance），从而在个体发育的不同阶段或整个生命周期中维持记忆状态<sup>5</sup>。这种长期记忆使得植物能够在其生命周期内持续地从先前的胁迫经历中受益。</p>
+        
+        <p>最为引人关注的是跨代胁迫记忆（transgenerational stress memory），即亲代（P generation）所经历的环境胁迫能够影响其未经胁迫的子代（F1 generation）甚至更后代（F2, F3... generations）的表型和胁迫响应能力<sup>10,20</sup>。如果这种影响仅持续到F1代，通常称为代间记忆（intergenerational memory），因为F1代的胚胎（种子）在母体内发育时可能直接受到了胁迫的影响或胁迫诱导的信号物质<sup>2,20</sup>。如果这种影响能够稳定地传递到F2代及以后（即F1代在正常条件下生长发育，其产生的F2代仍然表现出受胁迫影响的表型），则称为跨代遗传记忆（transgenerational epigenetic inheritance）<sup>5,20</sup>。</p>
+        
+        <p>跨代记忆被认为主要是通过表观遗传机制实现的，即亲代胁迫诱导产生的表观遗传标记（epigenetic marks）通过配子（精子和卵细胞）传递给了子代<sup>3,20</sup>。DNA甲基化和小RNA（特别是通过RdDM途径介导甲基化的siRNAs）被认为是跨代记忆传递的关键载体<sup>22,25</sup>。例如，研究表明，亲代经历干旱、盐胁迫或重金属胁迫后，其子代的DNA甲基化谱会发生改变，并伴随着胁迫耐受性的提高<sup>11,20</sup>。某些胁迫诱导的siRNAs也可能通过配子传递，在子代中重新建立起相应的表观遗传沉默状态<sup>7,25</sup>。</p>
+        
+        <p>然而，跨代表观遗传记忆的传递并非畅通无阻。在有性生殖过程中，特别是在配子发生和早期胚胎发育阶段，基因组会经历大规模的表观遗传重编程（epigenetic reprogramming），许多在体细胞时期建立的表观遗传标记会被清除或重置<sup>5,22</sup>。这被认为是防止异常表观遗传状态累积、确保后代正常发育的重要机制<sup>19,21</sup>。因此，胁迫诱导的表观遗传记忆能否成功"逃逸"重编程并稳定遗传给后代，是一个复杂且仍在深入研究的问题<sup>20,23</sup>。</p>
+        
+        <p>研究发现，植物的表观遗传重编程可能不如哺乳动物那样彻底，某些位点的甲基化标记（特别是CG甲基化）可能更容易被保留下来<sup>19,22</sup>。此外，一些调控重编程的关键因子，如DNA去甲基化酶DME，其活性在不同配子（雌性vs雄性）或发育阶段可能受到精密的调控，这也影响了记忆的传递效率<sup>20,22</sup>。例如，有研究提示胁迫记忆可能更容易通过雌配子传递<sup>20</sup>。</p>
+        
+        <p>跨代记忆的传递效率和稳定性还可能受到多种因素的影响，包括胁迫的类型、强度、作用时期（例如，作用于生殖发育期可能更容易产生可遗传的变异），以及植物的基因型和物种特异性<sup>2,20</sup>。这意味着跨代记忆可能并非一种普遍现象，而是具有一定的选择性和调控性。</p>
+        
+        <p>与记忆的维持机制相对应，记忆的"衰退"（fading）或主动"重置"（resetting）机制同样是胁迫记忆系统不可或缺的一部分<sup>15,23</sup>。持续维持一种高度警戒的胁迫响应状态可能会消耗大量能量和资源，对植物的正常生长和繁殖产生负面影响，即带来适合度成本（fitness cost）<sup>33,34</sup>。因此，当环境恢复正常时，植物需要有机制来清除不再需要的胁迫记忆，恢复到正常的生理状态<sup>8,35</sup>。DDM1和MOM1就被发现参与了胁迫诱导表观遗传状态的主动重置<sup>21,23</sup>。对于热胁迫记忆，也存在主动的重置机制，例如通过自噬途径降解积累的关键蛋白（如HSP90.1）<sup>15</sup>。理解这些记忆的"擦除"机制，对于全面认识胁迫记忆的动态调控、持续时间以及其在自然选择中的适应性意义至关重要。</p>
+        
+        <h3>3.3 胁迫记忆机制在作物改良中的应用潜力 (Potential Applications in Crop Improvement - including priming techniques and epigenetic breeding concepts)</h3>
+        
+        <p>对植物胁迫记忆和预处理分子机制的深入理解，为开发创新的作物改良策略、提高作物在逆境下的生产力提供了宝贵的理论基础和技术途径<sup>2,3</sup>。目前，主要的应用方向包括利用预处理技术诱导作物的抗逆性，以及探索基于表观遗传调控的育种新方法。</p>
+        
+        <p><strong>预处理技术（Priming techniques）</strong>，特别是种子预处理（Seed priming），是目前应用研究较为活跃且显示出巨大潜力的领域<sup>14,31</sup>。种子预处理是指在播种前，通过控制种子吸水过程，并辅以特定的物理、化学或生物因子处理，使种子预先进入一种"准备好"的生理状态，但不引发完全的萌发<sup>29,36</sup>。经过预处理的种子，在播种后通常表现出更快的萌发速度、更高的萌发率、更强的幼苗活力，并且在后续生长过程中遭遇胁迫时，能够表现出更强的耐受性<sup>33,37</sup>。
+
+预处理的方法多种多样，包括：
+<ol>
+    <li><strong>渗透预处理（Osmopriming）</strong>：利用聚乙二醇（PEG）等渗透调节剂控制种子吸水；</li>
+    <li><strong>水力预处理（Hydropriming）</strong>：仅用清水控制浸泡时间；</li>
+    <li><strong>化学预处理（Chemical priming）</strong>：使用低浓度的植物激素（如SA, GA）、信号分子类似物（如BABA, β-aminobutyric acid）、盐溶液、营养元素等进行处理<sup>14</sup>；</li>
+    <li><strong>生物预处理（Biopriming）</strong>：利用有益微生物（如植物生长促进根际细菌PGPR、植物生长促进真菌PGPF，如木霉菌<em>Trichoderma</em> spp.）或其代谢产物处理种子<sup>14,38</sup>；</li>
+    <li><strong>物理预处理（Physical priming）</strong>：如低温层积（stratification）、热激处理、磁场处理、甚至新兴的等离子体处理（plasma treatment）等<sup>39</sup>。</li>
+</ol>
+
+<p>种子预处理技术具有成本相对较低、操作简便、环境友好等优点，被认为是一种有前景的、可持续的提高作物抗逆性的手段<sup>14,33</sup>。然而，将预处理技术从实验室研究成功推向大田应用，还需要解决一些挑战，例如，如何针对不同的作物种类、胁迫类型和环境条件，优化预处理方法和参数，以获得稳定、可靠的效果，并评估其可能存在的适合度成本<sup>33,40</sup>。</p>
+
+<p>除了通过外界处理诱导预处理状态，另一个更具潜力的长远策略是直接从遗传和表观遗传层面改良作物的胁迫记忆能力，即<strong>表观遗传育种（Epigenetic breeding）</strong><sup>10,18</sup>。这包括两个主要途径：一是发掘和利用自然群体中存在的、与抗逆性状相关的优良表观等位基因（epialleles）<sup>19,21</sup>。表观等位基因是指DNA序列相同，但由于表观遗传修饰（如DNA甲基化）不同而导致功能差异的等位基因。通过全基因组表观遗传关联分析（EWAS）等方法，可以鉴定出这些与抗逆性相关的表观遗传变异，并通过分子标记辅助选择（MAS）将其导入优良品种中<sup>21,41</sup>。二是利用<strong>表观基因组编辑（Epigenome editing）</strong>技术，对作物的表观基因组进行定向改造<sup>3,42</sup>。近年来，基于CRISPR-Cas系统（特别是催化失活的dCas9或dCas12）的技术发展，使得精确靶向特定基因组位点，并对其DNA甲基化状态或组蛋白修饰状态进行修改成为可能<sup>9,43</sup>。例如，可以将dCas9与DNA甲基转移酶或去甲基化酶结构域融合，实现对目标基因启动子区域甲基化水平的精确调控；或者与组蛋白修饰酶（如HAT, HDAC, HMT, HDM）结构域融合，改变目标区域的组蛋白修饰模式<sup>42,44</sup>。通过这种方式，理论上可以"写入"或"擦除"特定的表观遗传记忆标记，从而定向改良作物的抗逆性状<sup>18,45</sup>。</p>
+
+<p>表观遗传育种和表观基因组编辑为作物改良带来了全新的机遇，有望克服传统遗传育种中遗传资源有限、育种周期长等瓶颈<sup>9,42</sup>。然而，这些策略也面临着关键的挑战。首先，我们需要更深入地理解表观遗传修饰与目标性状（特别是复杂的抗逆性状）之间的精确因果关系。其次，如何确保人工诱导或编辑产生的表观遗传变异能够稳定地遗传给后代，并且不会在多代遗传或环境变化中轻易丢失，是一个核心的技术难题<sup>10,22</sup>。最后，还需要仔细评估这些表观遗传修饰可能带来的潜在的、非预期的副作用，例如对植物生长、发育或产量的影响（即适合度成本），确保改良后的作物在综合农艺性状上具有优势<sup>34,40</sup>。解决这些问题需要基础研究和应用技术的协同发展。</p>
+
+<div class="table-container">
+    <table>
+        <caption>表2: 植物胁迫预处理策略及其应用示例</caption>
+        <thead>
+            <tr>
+                <th>预处理类型</th>
+                <th>预处理剂/方法(示例)</th>
+                <th>目标胁迫类型(示例)</th>
+                <th>主要效果(示例)</th>
+                <th>应用作物(示例)</th>
+                <th>参考文献(示例)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>渗透预处理</td>
+                <td>PEG(聚乙二醇)</td>
+                <td>干旱, 盐</td>
+                <td>提高萌发率和整齐度, 增强幼苗活力, 提高抗旱/盐性</td>
+                <td>小麦, 玉米, 水稻, 蔬菜</td>
+                <td>[[46](Abid et al., 2018)]</td>
+            </tr>
+            <tr>
+                <td>水力预处理</td>
+                <td>控制性吸水(纯水)</td>
+                <td>干旱, 低温</td>
+                <td>提高萌发速度, 增强幼苗抗逆性</td>
+                <td>多种作物</td>
+                <td>[31]</td>
+            </tr>
+            <tr>
+                <td>化学预处理</td>
+                <td>BABA(β-氨基丁酸)</td>
+                <td>病原体(真菌, 卵菌), 干旱, 盐</td>
+                <td>诱导防御启动, 增强抗病性, 提高抗逆性</td>
+                <td>拟南芥, 番茄, 马铃薯, 葡萄</td>
+                <td>[13,14]</td>
+            </tr>
+            <tr>
+                <td>化学预处理</td>
+                <td>SA(水杨酸)及其类似物(如INA)</td>
+                <td>病原体(生物营养型), 某些非生物胁迫</td>
+                <td>诱导SAR, 增强抗病性, 可能诱导跨代抗性</td>
+                <td>烟草, 拟南芥, 豆类, 茄子</td>
+                <td>[14]</td>
+            </tr>
+            <tr>
+                <td>化学预处理</td>
+                <td>ABA(脱落酸)</td>
+                <td>干旱, 盐, 低温</td>
+                <td>提高非生物胁迫耐受性, 调控气孔</td>
+                <td>多种作物</td>
+                <td>[4,22]</td>
+            </tr>
+            <tr>
+                <td>生物预处理</td>
+                <td>PGPR(如<em>Pseudomonas</em>, <em>Bacillus</em> spp.)</td>
+                <td>病原体, 干旱, 盐</td>
+                <td>促进生长, 诱导系统抗性(ISR), 提高养分吸收效率, 增强抗逆性</td>
+                <td>多种作物</td>
+                <td>[14,33,38]</td>
+            </tr>
+            <tr>
+                <td>生物预处理</td>
+                <td>PGPF(如<em>Trichoderma</em> spp.)</td>
+                <td>病原体, 干旱, 盐</td>
+                <td>促进生长, 诱导抗性, 产生抗生素, 增强抗逆性</td>
+                <td>多种作物</td>
+                <td>[14,33,38]</td>
+            </tr>
+            <tr>
+                <td>物理预处理</td>
+                <td>低温层积(Cold stratification)</td>
+                <td>休眠, 低温</td>
+                <td>打破休眠, 提高萌发率, 增强耐寒性</td>
+                <td>温带树木, 部分草本植物</td>
+                <td>[39]</td>
+            </tr>
+            <tr>
+                <td>物理预处理</td>
+                <td>等离子体处理(Cold atmospheric plasma, CAP)</td>
+                <td>干旱, 盐, 病原体, 重金属</td>
+                <td>改善种子萌发, 增强幼苗抗逆性, 灭活种子表面病原菌, 降低重金属吸收</td>
+                <td>小麦, 油菜, 拟南芥, 番茄, 水稻</td>
+                <td>[39]</td>
+            </tr>
+            <tr>
+                <td>纳米材料预处理</td>
+                <td>SeNPs(硒纳米颗粒), 壳聚糖纳米颗粒</td>
+                <td>病原体, 非生物胁迫</td>
+                <td>诱导抗性, 提高抗氧化能力, 增强胁迫耐受性</td>
+                <td>番茄, 烟草</td>
+                <td>[14]</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p><small>*注：此表为示例性总结，具体效果和应用范围可能因预处理条件、植物种类和环境因素而异。</small></p>
+
+<h2>4. 结论与展望 (Conclusion and Outlook)</h2>
+
+<p>植物胁迫记忆与预处理是植物在长期进化过程中形成的重要适应策略，使其能够在多变且充满挑战的环境中生存和繁衍。过去十多年的研究极大地深化了我们对这一复杂生物学现象背后分子机制的理解。</p>
+
+<h3>现状总结:</h3>
+
+<p>当前研究已经清晰地表明，植物胁迫记忆与预处理的分子基础是一个涉及多个层面、相互交织的复杂调控网络<sup>1,2</sup>。表观遗传调控机制，包括DNA甲基化、组蛋白修饰以及各类非编码RNA（miRNAs, siRNAs, lncRNAs）的动态变化，在将瞬时环境胁迫信号转化为相对持久的"分子记忆"印记方面扮演着核心角色<sup>3,5</sup>。这些表观遗传标记通过改变染色质结构和基因的可及性，调控胁迫响应基因的表达模式，从而建立和维持记忆状态，甚至在某些情况下实现记忆的跨代传递<sup>10,20</sup>。与此同时，植物激素（如ABA, SA, JA/ET）和活性氧（ROS）、NO、Ca<sup>2+</sup>等信号分子构成的信号感知与转导网络，负责将外界胁迫信号传递至细胞内部，触发即时的防御或适应反应，并能够与表观遗传系统相互作用，诱导或稳定表观遗传标记的形成<sup>5</sup>。此外，胁迫还会引起转录因子活性的改变和代谢途径的重编程，这些变化也共同参与了胁迫记忆的形成和功能表现<sup>4</sup>。我们对不同类型的胁迫记忆（如短期体细胞记忆、长期体细胞记忆、代间记忆、跨代记忆）及其可能的持续时间有了更清晰的认识，并开始识别出一些关键的分子标记和调控因子<sup>5</sup>。</p>
+
+<h3>存在问题/挑战:</h3>
+
+<p>尽管研究取得了显著进展，但植物胁迫记忆领域仍面临诸多挑战和未解之谜：</p>
+
+<ul>
+    <li><strong>机制整合的复杂性:</strong> 如何将来自表观遗传组、转录组、蛋白质组、代谢组等不同层面的海量数据有效整合起来，构建一个全面、动态地反映胁迫记忆调控网络的系统模型，仍然是一个巨大的挑战<sup>1</sup>。不同分子机制之间的精确相互作用模式（crosstalk）及其在不同胁迫、不同物种中的保守性和特异性，仍需深入探索。</li>
+    
+    <li><strong>记忆重置与衰退机制:</strong> 植物如何精确地"忘记"或"重置"不再需要的胁迫记忆？记忆衰退是被动的过程还是存在主动的擦除机制？调控这些过程的关键分子和信号通路是什么？对这些问题的理解对于认识记忆的动态平衡和适应性意义至关重要<sup>15</sup>。</li>
+    
+    <li><strong>记忆的特异性与交叉耐受:</strong> 植物胁迫记忆在多大程度上是针对特定胁迫的（特异性），又在多大程度上能提高对其他不同类型胁迫的耐受性（交叉耐受）？这两种特性背后的分子基础是什么？它们之间是否存在权衡（trade-off）？<sup>31</sup>。</li>
+    
+    <li><strong>适合度成本的评估与平衡:</strong> 维持胁迫记忆状态或启动预处理反应往往需要植物付出额外的能量和资源，这可能对其正常的生长、发育或繁殖产生负面影响，即存在适合度成本<sup>33</sup>。如何准确量化这种成本，并理解植物如何在记忆带来的抗逆优势与潜在的生长代价之间进行权衡和优化，是评价记忆适应性价值和指导应用研究的关键问题。</li>
+    
+    <li><strong>跨代记忆的稳定性与遗传规律:</strong> 跨代表观遗传记忆的稳定性如何？它能在多代中持续存在吗？其遗传传递是否遵循特定的规律？环境变化如何影响跨代记忆的维持？这些问题对于理解表观遗传在植物快速适应和进化中的作用至关重要<sup>10</sup>。</li>
+</ul>
+
+<h3>未来展望:</h3>
+
+<p>为了应对上述挑战并进一步推动该领域的发展，未来的研究可以关注以下几个方向：</p>
+
+<ul>
+    <li><strong>多组学整合与系统生物学分析:</strong> 结合基因组学、表观基因组学、转录组学、蛋白质组学和代谢组学等高通量技术，在时间和空间维度上捕捉胁迫记忆形成、维持和重置过程中的动态分子变化，并利用生物信息学和系统生物学的方法，构建和解析复杂的调控网络模型<sup>6</sup>。</li>
+    
+    <li><strong>提高时空分辨率的研究:</strong> 利用单细胞测序、活体成像等技术，在单细胞、特定组织或器官（如分生组织、配子）层面研究胁迫记忆的形成、维持和传递机制，揭示其时空异质性和细胞特异性。</li>
+    
+    <li><strong>表观基因组编辑技术的应用:</strong> 充分利用CRISPR-dCas等先进的表观基因组编辑工具，对候选基因或基因组区域的表观遗传状态进行精确、可控的修饰，从而直接验证特定表观遗传标记在胁迫记忆中的功能，并探索其在作物抗逆改良中的应用潜力<sup>3</sup>。</li>
+    
+    <li><strong>深入研究记忆重置机制:</strong> 聚焦于发掘和表征调控胁迫记忆衰退和重置的关键分子（如DDM1, MOM1, DME, 自噬相关蛋白等）和信号通路，理解记忆"擦除"过程的分子细节和生理意义<sup>15</sup>。</li>
+    
+    <li><strong>加强田间应用与评估:</strong> 将实验室中有效的预处理技术和策略，转移到田间条件下进行严格的有效性、稳定性、经济性以及对环境影响的评估，筛选出真正适用于农业生产的实用技术，弥合基础研究与实际应用之间的差距<sup>32</sup>。</li>
+</ul>
+
+<h3>重申意义:</h3>
+
+<p>对植物胁迫记忆与预处理分子机制的深入探索，不仅极大地丰富了我们对植物如何感知环境、适应变化、甚至将经验传递给后代的认知，推动了植物生理学、分子生物学、遗传学和表观遗传学等基础学科的发展，更重要的是，它为我们应对全球气候变化带来的日益严峻的农业挑战提供了全新的视角和有力的武器。通过理解和利用植物自身的记忆能力，我们有望开发出更有效、更可持续的作物抗逆改良策略，为保障世界粮食安全、促进生态友好型农业的发展做出关键贡献<sup>3</sup>。这项研究领域充满了机遇与挑战，预示着植物科学和农业科技未来的重要发展方向。</p>
+
+<div class="references">
+    <h2>参考文献 (References)</h2>
+    
+    <div class="reference-item">
+        <sup>1</sup> Liu, N., Fromm, M. Epigenetic control of cold and heat stress memory in plants. <em>Front. Plant Sci.</em> <strong>13</strong>, 1075279 (2022). [DOI: 10.3389/fpls.2022.1075279]
+    </div>
+    
+    <div class="reference-item">
+        <sup>2</sup> Gallusci, P., Agius, D. R., Moschou, P. N., Dobránszki, J., & Tiburcio, A. F. Deep inside the epigenetic memories of stressed plants. <em>Trends Plant Sci.</em> <strong>27</strong>(8), 823-837 (2022). [DOI: 10.1016/j.tplants.2022.03.006]
+    </div>
+    
+    <div class="reference-item">
+        <sup>3</sup> Friedrich, T., Faivre, L., Bäurle, I., & Schubert, D. Resetting heat stress memory in Arabidopsis. <em>Plant J.</em> <strong>117</strong>(1), 1-15 (2024). [DOI: 10.1111/tpj.16496]
+    </div>
+    
+    <div class="reference-item">
+        <sup>4</sup> Sharma, M., Kumar, V., Kumar, R., et al. Revisiting plant stress memory: mechanisms and contribution to stress adaptation. <em>Plant Stress</em> <strong>11</strong>, 100277 (2024). [DOI: 10.1016/j.stress.2024.100277]
+    </div>
+    
+    <div class="reference-item">
+        <sup>5</sup> Oberkofler, V., Pratelli, R., & Bäurle, I. Keeping the memory: effector and regulator proteins of somatic heat stress memory in Arabidopsis. <em>Plant Cell</em> <strong>35</strong>(1), 187-205 (2023). [DOI: 10.1093/plcell/koac306]
+    </div>
+    
+    <div class="reference-item">
+        <sup>6</sup> Liu, H., Ding, Y., Zhou, Y., Jin, W., Xie, K., & Chen, L. O. Epigenetic regulation of transcriptional memory in plant drought tolerance. <em>Int. J. Mol. Sci.</em> <strong>23</strong>(21), 12918 (2022). [DOI: 10.3390/ijms232112918]
+    </div>
+    
+    <div class="reference-item">
+        <sup>7</sup> Yang, Z., Miki, D., He, Y., et al. RNA-mediated stress memory in plants. <em>Front. Plant Sci.</em> <strong>15</strong>, 1387575 (2024). [DOI: 10.3389/fpls.2024.1387575]
+    </div>
+    
+    <div class="reference-item">
+        <sup>8</sup> Bilichak, A., & Kovalchuk, I. Heritable responses to stress in plants. <em>Quant. Plant Biol.</em> <strong>4</strong>, e33 (2023). [DOI: 10.1017/qpb.2023.27]
+    </div>
+    
+    <div class="reference-item">
+        <sup>9</sup> Miryeganeh, M. Plants' epigenetic mechanisms and abiotic stress. <em>Genes (Basel)</em> <strong>12</strong>(8), 1106 (2021). [DOI: 10.3390/genes12081106]
+    </div>
+    
+    <div class="reference-item">
+        <sup>10</sup> Zandalinas, S. I., Sengupta, S., Fritschi, F. B., & Mittler, R. The impact of multifactorial stress combination on plant growth and survival. <em>New Phytol.</em> <strong>230</strong>(4), 1309-1319 (2021). [DOI: 10.1111/nph.17232]
+    </div>
+    
+    <div class="reference-item">
+        <sup>11</sup> Wang, Z., Hong, Y., Zhu, G., Li, Y., Yuan, L., & Liu, W. Role of epigenetic modifications and hormonal signaling in drought stress memory of plants. <em>Int. J. Mol. Sci.</em> <strong>25</strong>(15), 8229 (2024). [DOI: 10.3390/ijms25158229]
+    </div>
+    
+    <div class="reference-item">
+        <sup>12</sup> Dogra, V., & Kim, C. Chloroplast-mediated activation of plant defence and immunity. <em>Trends Plant Sci.</em> <strong>28</strong>(1), 76-90 (2023). [DOI: 10.1016/j.tplants.2022.08.001]
+    </div>
+    
+    <div class="reference-item">
+        <sup>13</sup> Gong, Z., Xiong, L., Shi, H., Yang, S., Herrera-Estrella, L. R., Xu, G.,... & Zhu, J. K. Plant abiotic stress response and nutrient use efficiency. <em>Sci. China Life Sci.</em> <strong>63</strong>(5), 635-674 (2020). [DOI: 10.1007/s11427-020-1683-x]
+    </div>
+    
+    <div class="reference-item">
+        <sup>14</sup> Mauch-Mani, B., Baccelli, I., Luna, E., & Flors, V. Defense priming: an adaptive part of induced resistance. <em>Annu. Rev. Plant Biol.</em> <strong>68</strong>, 485-512 (2017).
+    </div>
+    
+    <div class="reference-item">
+        <sup>15</sup> Conrath, U., Beckers, G. J., Langenbach, C. J., & Jaskiewicz, M. R. Priming for enhanced defense. <em>Annu. Rev. Phytopathol.</em> <strong>53</strong>, 97-119 (2015).
+    </div>
+    
+    <div class="reference-item">
+        <sup>16</sup> Bäurle, I., & Trindade, I. Chromatin regulation of somatic abiotic stress memory. <em>Curr. Opin. Plant Biol.</em> <strong>55</strong>, 59-66 (2020). [DOI: 10.1016/j.pbi.2020.04.001]
+    </div>
+    
+    <div class="reference-item">
+        <sup>17</sup> Lämke, J., & Bäurle, I. Epigenetic and chromatin-based mechanisms in environmental stress adaptation and stress memory in plants. <em>Genome Biol.</em> <strong>18</strong>(1), 124 (2017). [DOI: 10.1186/s13059-017-1253-z]
+    </div>
+    
+    <div class="reference-item">
+        <sup>18</sup> Crisp, P. A., Ganguly, D., Eichten, S. R., Borevitz, J. O., & Pogson, B. J. Reconsidering plant memory: Intersections between stress recovery, RNA turnover, and epigenetics. <em>Sci. Adv.</em> <strong>2</strong>(2), e1501340 (2016). [DOI: 10.1126/sciadv.1501340]
+    </div>
+    
+    <div class="reference-item">
+        <sup>19</sup> Hilker, M., Schwachtje, J., Baier, M., Balazadeh, S., Bäurle, I., Geiselhardt, S.,... & Van Poecke, R. M. Priming and memory of stress responses in organisms lacking a nervous system. <em>Biol. Rev. Camb. Philos. Soc.</em> <strong>91</strong>(4), 1118-1133 (2016). [DOI: 10.1111/brv.12215]
+    </div>
+    
+    <div class="reference-item">
+        <sup>20</sup> Zhang, H., Lang, Z., & Zhu, J. K. Dynamics and function of DNA methylation in plants. <em>Nat. Rev. Mol. Cell Biol.</em> <strong>19</strong>(8), 489-506 (2018). [DOI: 10.1038/s41580-018-0016-z]
+    </div>
+    
+    <h3>Works cited</h3>
+    
+    <ol>
+        <li>Deep inside the epigenetic memories of stressed plants - FLORE, accessed April 26, 2025, <a href="https://flore.unifi.it/retrieve/11208e62-e853-4f92-8d35-d55d1d911b6f/Gallusci%2Bet%2Bal.pdf" target="_blank">https://flore.unifi.it/retrieve/11208e62-e853-4f92-8d35-d55d1d911b6f/Gallusci%2Bet%2Bal.pdf</a></li>
+        
+        <li>Stress memory and its regulation in plants experiencing recurrent drought conditions - PMC, accessed April 26, 2025, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9928933/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC9928933/</a></li>
+        
+        <li>Decoding the Mechanisms of Plant Epigenetic Adaptations to Stress, accessed April 26, 2025, <a href="https://www.jstage.jst.go.jp/article/ras/13/2/13_1/_html/-char/ja" target="_blank">https://www.jstage.jst.go.jp/article/ras/13/2/13_1/_html/-char/ja</a></li>
+        
+        <li>Revisiting plant stress memory: mechanisms and contribution to stress adaptation | Request PDF - ResearchGate, accessed April 26, 2025, <a href="https://www.researchgate.net/publication/378828151_Revisiting_plant_stress_memory_mechanisms_and_contribution_to_stress_adaptation" target="_blank">https://www.researchgate.net/publication/378828151_Revisiting_plant_stress_memory_mechanisms_and_contribution_to_stress_adaptation</a></li>
+        
+        <li>Epigenetic stress memory: A new approach to study cold and heat stress responses in plants - Frontiers, accessed April 26, 2025, <a href="https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.1075279/full" target="_blank">https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.1075279/full</a></li>
+        
+        <li>Unveiling the role of epigenetic mechanisms and redox signaling in alleviating multiple abiotic stress in plants - Frontiers, accessed April 26, 2025, <a href="https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1456414/full" target="_blank">https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1456414/full</a></li>
+        
+        <li>The multifaceted role of RNA-based regulation in plant stress memory - Frontiers, accessed April 26, 2025, <a href="https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1387575/full" target="_blank">https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1387575/full</a></li>
+        
+        <li>Stress resilience in plants: the complex interplay between heat stress memory and resetting, accessed April 26, 2025, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11840417/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC11840417/</a></li>
+        
+        <li>Plant breeding advancements with "CRISPR-Cas" genome editing technologies will assist future food security - Frontiers, accessed April 26, 2025, <a href="https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2023.1133036/full" target="_blank">https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2023.1133036/full</a></li>
+        
+        <li>Mechanisms of Plant Epigenetic Regulation in Response to Plant Stress: Recent Discoveries and Implications - MDPI, accessed April 26, 2025, <a href="https://www.mdpi.com/2223-7747/13/2/163" target="_blank">https://www.mdpi.com/2223-7747/13/2/163</a></li>
+        
+        <li>Plants' Epigenetic Mechanisms and Abiotic Stress - PMC, accessed April 26, 2025, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8394019/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC8394019/</a></li>
+        
+        <li>Maintenance of abiotic stress memory in plants: Lessons learned from heat acclimation, accessed April 26, 2025, <a href="https://academic.oup.com/plcell/article/35/1/187/6769898" target="_blank">https://academic.oup.com/plcell/article/35/1/187/6769898</a></li>
+        
+        <li>Immune priming in plants: from the onset to transgenerational maintenance - Portland Press, accessed April 26, 2025, <a href="https://portlandpress.com/essaysbiochem/article/66/5/635/231563/Immune-priming-in-plants-from-the-onset-to" target="_blank">https://portlandpress.com/essaysbiochem/article/66/5/635/231563/Immune-priming-in-plants-from-the-onset-to</a></li>
+        
+        <li>Priming seeds for the future: Plant immune memory and ... - Frontiers, accessed April 26, 2025, <a href="https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.961840/full" target="_blank">https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.961840/full</a></li>
+        
+        <li>Stress resilience in plants: the complex interplay between heat ..., accessed April 26, 2025, <a href="https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.20377" target="_blank">https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.20377</a></li>
+        
+        <li>The Good, the Bad, and the Epigenetic: Stress-Induced Metabolite Regulation and Transgenerational Effects - MDPI, accessed April 26, 2025, <a href="https://www.mdpi.com/2075-4655/9/2/10" target="_blank">https://www.mdpi.com/2075-4655/9/2/10</a></li>
+        
+        <li>Exploration of Epigenetics for Improvement of Drought and Other Stress Resistance in Crops: A Review - PMC, accessed April 26, 2025, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8235456/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC8235456/</a></li>
+        
+        <li>Decoding the Mechanisms of Plant Epigenetic Adaptations to Stress - J-Stage, accessed April 26, 2025, <a href="https://www.jstage.jst.go.jp/article/ras/13/2/13_1/_html/-char/en" target="_blank">https://www.jstage.jst.go.jp/article/ras/13/2/13_1/_html/-char/en</a></li>
+        
+        <li>Epigenetic memory in plants | The EMBO Journal, accessed April 26, 2025, <a href="https://www.embopress.org/doi/10.15252/embj.201488883" target="_blank">https://www.embopress.org/doi/10.15252/embj.201488883</a></li>
+        
+        <li>Heritable responses to stress in plants | Quantitative Plant Biology ..., accessed April 26, 2025, <a href="https://www.cambridge.org/core/journals/quantitative-plant-biology/article/heritable-responses-to-stress-in-plants/FD1DD7EFD72C776998F390F925AE93EE" target="_blank">https://www.cambridge.org/core/journals/quantitative-plant-biology/article/heritable-responses-to-stress-in-plants/FD1DD7EFD72C776998F390F925AE93EE</a></li>
+        
+        <li>Transgenerational Stability of the Arabidopsis Epigenome Is Coordinated by CG Methylation | Request PDF - ResearchGate, accessed April 26, 2025, <a href="https://www.researchgate.net/publication/6036374_Transgenerational_Stability_of_the_Arabidopsis_Epigenome_Is_Coordinated_by_CG_Methylation" target="_blank">https://www.researchgate.net/publication/6036374_Transgenerational_Stability_of_the_Arabidopsis_Epigenome_Is_Coordinated_by_CG_Methylation</a></li>
+        
+        <li>Transcriptional Stress Memory and Transgenerational Inheritance of ..., accessed April 26, 2025, <a href="https://www.mdpi.com/1422-0067/23/21/12918" target="_blank">https://www.mdpi.com/1422-0067/23/21/12918</a></li>
+        
+        <li>Identification of genes preventing transgenerational transmission of stress-induced epigenetic states | PNAS, accessed April 26, 2025, <a href="https://www.pnas.org/doi/10.1073/pnas.1402275111" target="_blank">https://www.pnas.org/doi/10.1073/pnas.1402275111</a></li>
+        
+        <li>Decoding the Mechanisms of Plant Epigenetic Adaptations to Stress - ResearchGate, accessed April 26, 2025, <a href="https://www.researchgate.net/publication/390778456_Decoding_the_Mechanisms_of_Plant_Epigenetic_Adaptations_to_Stress" target="_blank">https://www.researchgate.net/publication/390778456_Decoding_the_Mechanisms_of_Plant_Epigenetic_Adaptations_to_Stress</a></li>
+        
+        <li>Epigenetic Modifications of Hormonal Signaling Pathways in Plant Drought Response and Tolerance for Sustainable Food Security - MDPI, accessed April 26, 2025, <a href="https://www.mdpi.com/1422-0067/25/15/8229" target="_blank">https://www.mdpi.com/1422-0067/25/15/8229</a></li>
+        
+        <li>Vivek Dogra, PhD - CSIR - Institute of Himalayan Bioresource Technology, Palampur, accessed April 26, 2025, <a href="https://www.ihbt.res.in/components/com_chronoforms5/chronoforms/uploads/sctdetail/20240420192428_CV_Vivek_Dogra_April_2024.pdf" target="_blank">https://www.ihbt.res.in/components/com_chronoforms5/chronoforms/uploads/sctdetail/20240420192428_CV_Vivek_Dogra_April_2024.pdf</a></li>
+        
+        <li>Somatic, intergenerational and transgenerational stress memory. Memory is dependent on stage of the plant at which priming is done - ResearchGate, accessed April 26, 2025, <a href="https://www.researchgate.net/figure/Somatic-intergenerational-and-transgenerational-stress-memory-Memory-is-dependent-on_fig1_368535113" target="_blank">https://www.researchgate.net/figure/Somatic-intergenerational-and-transgenerational-stress-memory-Memory-is-dependent-on_fig1_368535113</a></li>
+        
+        <li>Vivek Dogra, PhD - CSIR - Institute of Himalayan Bioresource Technology, Palampur, accessed April 26, 2025, <a href="https://www.ihbt.res.in/components/com_chronoforms5/chronoforms/uploads/sctdetail/20230111194659_CV_Vivek_Dogra_Jan_2023.pdf" target="_blank">https://www.ihbt.res.in/components/com_chronoforms5/chronoforms/uploads/sctdetail/20230111194659_CV_Vivek_Dogra_Jan_2023.pdf</a></li>
+        
+        <li>Redox Regulation by Priming Agents Toward a Sustainable Agriculture - Oxford Academic, accessed April 26, 2025, <a href="https://academic.oup.com/pcp/article/65/7/1087/7642714" target="_blank">https://academic.oup.com/pcp/article/65/7/1087/7642714</a></li>
+        
+        <li>One genome, many cell states: epigenetic control of innate immunity - PMC, accessed April 26, 2025, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9081230/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC9081230/</a></li>
+        
+        <li>Stress memory responses and seed priming correlate with drought tolerance in plants: an overview - ResearchGate, accessed April 26, 2025, <a href="https://www.researchgate.net/publication/358045384_Stress_memory_responses_and_seed_priming_correlate_with_drought_tolerance_in_plants_an_overview" target="_blank">https://www.researchgate.net/publication/358045384_Stress_memory_responses_and_seed_priming_correlate_with_drought_tolerance_in_plants_an_overview</a></li>
+        
+        <li>Drought Stress Memory at the Plant Cycle Level: A Review - PMC, accessed April 26, 2025, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8466371/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC8466371/</a></li>
+        
+        <li>A comprehensive meta-analysis reveals the key variables and scope of seed defense priming - Frontiers, accessed April 26, 2025, <a href="https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2023.1208449/full" target="_blank">https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2023.1208449/full</a></li>
+        
+        <li>Endophytic Streptomyces hygroscopicus OsiSh-2-Mediated Balancing between Growth and Disease Resistance in Host Rice | mBio - ASM Journals, accessed April 26, 2025, <a href="https://journals.asm.org/doi/10.1128/mbio.01566-21" target="_blank">https://journals.asm.org/doi/10.1128/mbio.01566-21</a></li>
+        
+        <li>Stress resilience in plants: the complex interplay between heat stress memory and resetting, accessed April 26, 2025, <a href="https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.20377" target="_blank">https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.20377</a></li>
+        
+        <li>Plant-Based Biostimulants for Seeds in the Context of Circular Economy and Sustainability, accessed April 26, 2025, <a href="https://www.researchgate.net/publication/379457568_Plant-Based_Biostimulants_for_Seeds_in_the_Context_of_Circular_Economy_and_Sustainability" target="_blank">https://www.researchgate.net/publication/379457568_Plant-Based_Biostimulants_for_Seeds_in_the_Context_of_Circular_Economy_and_Sustainability</a></li>
+        
+        <li>Plant-Based Biostimulants for Seeds in the Context of Circular Economy and Sustainability, accessed April 26, 2025, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11013454/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC11013454/</a></li>
+        
+        <li>Rhizosphere Microorganisms Supply Availability of Soil Nutrients and Induce Plant Defense - PMC - PubMed Central, accessed April 26, 2025, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10975764/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC10975764/</a></li>
+        
+        <li>The Effects of Plasma on Plant Growth, Development, and Sustainability - MDPI, accessed April 26, 2025, <a href="https://www.mdpi.com/2076-3417/10/17/6045" target="_blank">https://www.mdpi.com/2076-3417/10/17/6045</a></li>
+        
+        <li>Echoes of a Stressful Past: Abiotic Stress Memory in Crop Plants towards Enhanced Adaptation - MDPI, accessed April 26, 2025, <a href="https://www.mdpi.com/2077-0472/13/11/2090" target="_blank">https://www.mdpi.com/2077-0472/13/11/2090</a></li>
+        
+        <li>Gene Pyramiding for Sustainable Crop Improvement against Biotic and Abiotic Stresses, accessed April 26, 2025, <a href="https://www.mdpi.com/2073-4395/10/9/1255" target="_blank">https://www.mdpi.com/2073-4395/10/9/1255</a></li>
+        
+        <li>Genome-edited foods - CORE, accessed April 26, 2025, <a href="https://core.ac.uk/download/590726619.pdf" target="_blank">https://core.ac.uk/download/590726619.pdf</a></li>
+        
+        <li>CRISPR-Cas gene editing technology and its application prospect in medicinal plants, accessed April 26, 2025, <a href="https://www.researchgate.net/publication/359015491_CRISPR-Cas_gene_editing_technology_and_its_application_prospect_in_medicinal_plants" target="_blank">https://www.researchgate.net/publication/359015491_CRISPR-Cas_gene_editing_technology_and_its_application_prospect_in_medicinal_plants</a></li>
+        
+        <li>Gabriel Lopez-Berestein, MD - MD Anderson Cancer Center, accessed April 26, 2025, <a href="https://faculty.mdanderson.org/profiles/gabriel_lopez-berestein.html" target="_blank">https://faculty.mdanderson.org/profiles/gabriel_lopez-berestein.html</a></li>
+        
+        <li>Table of Contents - Case Western Reserve University, accessed April 26, 2025, <a href="https://case.edu/studentlife/ugresearch/sites/default/files/2025-04/Spring%202025%20Abstract%20Compendium.pdf" target="_blank">https://case.edu/studentlife/ugresearch/sites/default/files/2025-04/Spring%202025%20Abstract%20Compendium.pdf</a></li>
+        
+        <li>Plant Science Decadal Vision 2020--2030 - Plantae, accessed April 26, 2025, <a href="https://plantae.org/wp-content/uploads/2020/11/DECADAL-VISION-2020-FINAL-sm.pdf" target="_blank">https://plantae.org/wp-content/uploads/2020/11/DECADAL-VISION-2020-FINAL-sm.pdf</a></li>
+    </ol>

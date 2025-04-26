@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>植物胁迫记忆和预处理的分子机制</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #1a5a37;
+            --secondary-color: #f8f8f8;
+            --accent-color-1: #e8d0d9; /* Soft pink */
+            --accent-color-2: #d0e8e5; /* Soft mint */
+            --accent-color-3: #f2e8c9; /* Soft yellow */
+            --text-color: #333;
+            --link-color: #1a5a37;
+            --border-color: #ddd;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Noto Serif', 'Times New Roman', Times, serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: #fff;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1.5rem;
+            color: var(--primary-color);
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary-color);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .abstract, .keywords {
+            background-color: var(--accent-color-2);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+        }
+        
+        .abstract-title, .keywords-title {
+            font-weight: 700;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section:nth-of-type(odd) {
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+        
+        .section:nth-of-type(3n+1) {
+            background-color: var(--accent-color-1);
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+        
+        .section:nth-of-type(3n+2) {
+            background-color: var(--accent-color-2);
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+        
+        .section:nth-of-type(3n+3) {
+            background-color: var(--accent-color-3);
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+        
+        .references {
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-top: 3rem;
+        }
+        
+        .references ol {
+            padding-left: 1.5rem;
+        }
+        
+        .references li {
+            margin-bottom: 0.8rem;
+        }
+        
+        strong {
+            font-weight: 700;
+        }
+        
+        /* Add responsive styles */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 13px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .abstract, .keywords, .section, .references {
+                padding: 1rem;
+            }
+        }
+        
+        /* Add some visual elements */
+        .accent-bar {
+            height: 5px;
+            background: linear-gradient(to right, var(--accent-color-1), var(--accent-color-2), var(--accent-color-3));
+            margin-bottom: 2rem;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>植物胁迫记忆和预处理的分子机制</h1>
+        </div>
+    </header>
+    
+    <div class="accent-bar"></div>
+    
+    <div class="container">
+        <div class="abstract">
+            <span class="abstract-title">摘要：</span>
+            <p>植物能够通过"胁迫记忆"机制将以往的胁迫经历"记住"，从而在遇到后续相似胁迫时更快更强地做出反应，提高存活率和适应性¹。胁迫预处理（priming）是指对植物施加一次较轻的初级胁迫以诱导此类记忆效应，从而使植物对后续更严酷的逆境具有更高的耐受性¹。本文综述了当前模式植物（如拟南芥、水稻）研究中发现的主要胁迫记忆的分子机制，包括<strong>表观遗传修饰</strong>（如DNA甲基化、组蛋白修饰）、<strong>转录记忆</strong>（如RNA聚合酶II暂停、转录因子持续表达）²,³以及<strong>蛋白质和信号网络</strong>（如热激转录因子HSFA2/HSFA3复合物、钙信号和活性氧信号等）³,⁴。这些机制使胁迫响应相关基因在再次受胁时更迅速或更高幅度地表达，在生理层面表现为气孔更快速关闭、抗氧化酶活性增强、渗透保护物质积累等，从而减轻氧化损伤并改善水分状态⁴,⁵。文章还讨论了典型的<strong>胁迫预处理策略</strong>及其在农业上的应用，如干旱驯化、热激预处理、化学诱导（如水杨酸、β-氨基丁酸）和有益微生物接种等，这些措施可提高作物对干旱、盐害、高温等逆境的抗性⁶,⁷。最后，对植物胁迫记忆研究的最新进展、现存挑战（如产量权衡、记忆维持机制尚不清晰）和未来前景进行了展望⁵。</p>
+        </div>
+        
+        <div class="keywords">
+            <span class="keywords-title">关键词：</span>胁迫记忆； 预处理； 表观遗传； 干旱； 拟南芥； 作物耐逆性
+        </div>
+        
+        <div class="abstract">
+            <span class="abstract-title">Abstract:</span>
+            <p>Plants can "remember" previous stress exposures through a phenomenon known as <strong>stress memory</strong>, which enables faster and stronger responses to subsequent stress events and thus enhances survival and adaptation¹. <strong>Stress priming</strong> refers to an initial sub-lethal stress treatment that induces such memory, thereby increasing a plant's tolerance to later, more severe stresses¹. This paper reviews the molecular mechanisms underlying plant stress memory as elucidated in current model systems like <em>Arabidopsis thaliana</em> and rice, including <strong>epigenetic modifications</strong> (DNA methylation, histone marks), <strong>transcriptional memory</strong> (e.g. stalled RNA polymerase II and sustained transcription factor expression)²,³, and <strong>protein/signaling networks</strong> (e.g. heat shock factor complexes HSFA2/HSFA3, calcium and ROS signaling)³,⁴. These mechanisms enable stress-responsive genes to be reactivated more rapidly or robustly upon re-stress, resulting in physiological manifestations such as quicker stomatal closure, enhanced antioxidant enzyme activities, and accumulation of osmoprotectants, which collectively reduce oxidative damage and improve water retention during stress⁴,⁵. We also discuss common <strong>priming strategies</strong> and their agricultural applications, such as drought acclimation, heat preconditioning, chemical priming (e.g. with salicylic acid or β-aminobutyric acid), and beneficial microbe-mediated priming, which can improve crop resistance to drought, salinity, heat and other stresses⁶,⁷. Finally, we summarize recent progress in this field, current challenges (e.g. yield trade-offs and incomplete knowledge of memory maintenance), and future prospects for harnessing stress memory in crop improvement⁵.</p>
+        </div>
+        
+        <div class="keywords">
+            <span class="keywords-title">Keywords:</span> stress memory; priming; epigenetics; drought; Arabidopsis; crop tolerance
+        </div>
+        
+        <div class="section">
+            <h2>引言 (Introduction)</h2>
+            <p>植物经常暴露于干旱、盐碱和极端温度等不利环境条件。与能够移动的生物不同，植物无法逃避这些胁迫，但它们进化出了复杂的适应机制。值得注意的是，植物能够以一种改变其对未来胁迫响应的方式"记住"过去的胁迫事件，而这种改变不涉及其DNA序列的变化⁵,⁸。这种现象被称为<strong>胁迫记忆</strong>（也称为胁迫印记或获得性耐受）。例如，在生长早期经历的轻度干旱或热激可以留下记忆印记，使植物在生命后期再次遇到干旱或高温时能更有效地应对⁵。这种基于记忆的准备状态在生态学上是有益的，因为它在反复出现的胁迫条件下提高了生存率和适应性。</p>
+            
+            <p>研究人员已在多种植物物种和胁迫类型中观察到胁迫记忆。一个典型的例子是拟南芥的<strong>干旱"训练"</strong>：预先暴露于中度干旱的植物在第二次干旱时表现出更快更强的基因表达响应和更高的耐受性²。类似地，一次中度热胁迫可以诱导持续数天的<strong>热胁迫记忆</strong>，使植物在预处理事件后能够耐受原本致死的高温³。胁迫记忆可以根据持续时间和遗传性进行分类：<strong>体细胞记忆</strong>在个体生命周期内持续存在（通过有丝分裂遗传），不传递给后代；而<strong>代际</strong>或<strong>跨代记忆</strong>如果胁迫印记发生在发育后期或通过可遗传的表观遗传变化产生，则可以通过种子传递给下一代⁵。例如，亲本植物经历的干旱或高盐有时会导致后代更耐胁迫，尽管这种遗传记忆在许多情况下可能在繁殖过程中被部分重置⁵,⁹。</p>
+            
+            <p>理解胁迫记忆和预处理的分子基础具有重要意义，尤其是在气候变化导致干旱和热浪频率增加的背景下。增强作物的胁迫记忆可能是一种提高其在胁迫下恢复力并稳定产量的新策略⁷,⁸。在本综述中，我们讨论：（1）已知的使植物能够储存和检索过去胁迫"记忆"的<strong>分子机制</strong>；（2）植物中胁迫记忆的<strong>生理和分子表现</strong>；以及（3）用于作物改良的实用<strong>预处理策略和应用</strong>。我们还将重点介绍该新兴领域的当前进展、挑战（例如潜在的生长-产量权衡）和未来前景。</p>
+        </div>
+        
+        <div class="section">
+            <h2>1. 胁迫记忆和预处理的分子机制 (Molecular Mechanisms of Stress Memory and Priming)</h2>
+            
+            <h3>1.1 表观遗传和转录记忆 (Epigenetic and Transcriptional Memory)</h3>
+            
+            <p>植物编码胁迫记忆的一个基本方式是通过<strong>表观遗传修饰</strong>——即不涉及DNA序列改变的可遗传的基因活性变化。在胁迫期间，某些基因位点可能会发生DNA甲基化或组蛋白修饰的改变，这些改变在胁迫解除后仍然持续存在，从而"标记"这些基因，以便在后续胁迫发生时更快地重新激活⁵。例如，在拟南芥中，反复的脱水胁迫导致特定干旱响应基因上组蛋白H3赖氨酸4三甲基化（H3K4me3）的积累，同时其启动子上存在暂停的RNA聚合酶II²。这些标记在恢复期间得以保留，使基因处于一种"待命"状态，以便在干旱再次来袭时能以更高的速率转录²。Ding等人首次证明了这种<strong>转录记忆</strong>现象，表明"训练过"的基因在预处理后维持着升高的H3K4me3水平和聚合酶占据率，这有助于更快的再次诱导²。这是短暂胁迫留下持久分子印记的一种机制。</p>
+            
+            <p>多项研究证实了表观遗传标记在胁迫记忆中的作用。例如，经历干旱胁迫的水稻植株表现出DNA甲基化模式的变化，这种变化会持续到后续的胁迫事件中，并与胁迫相关基因表达的改变相关⁵。同样，组蛋白修饰酶和染色质重塑因子也与记忆有关。某些组蛋白乙酰转移酶和Polycomb抑制复合物是拟南芥春化响应（一种冷诱导的开花记忆）所必需的，这说明了染色质状态如何储存季节性"记忆"⁹。在热胁迫的情况下，特定的热激转录因子（HSFs）有助于建立记忆状态：拟南芥的<strong>HSFA2</strong>是一种热诱导的HSF，在初次热激后积累，并在细胞核中存在数天，促进热保护基因的持续表达³。HSFA2与HSFA3协同作用，形成异源复合物，增强靶基因位点的H3K4超甲基化，从而在记忆阶段延长其活跃转录³。这种活跃的染色质状态是热胁迫记忆的一个标志，缺乏HSFA2或HSFA3的突变体表现出受损的获得性耐热性³。</p>
+            
+            <p>小RNA通路也参与胁迫记忆的调控¹。<strong>微小RNA（miRNAs）</strong>可以在胁迫预处理期间在转录后水平调控基因表达，并且miRNA谱的变化与预处理状态相关⁵。<strong>siRNAs</strong>可以通过RNA介导的DNA甲基化（RdDM）途径指导特定位点的DNA甲基化，可能锁定胁迫诱导的表观遗传状态¹。<strong>长链非编码RNA（lncRNAs）</strong>可能引导染色质修饰因子到胁迫响应基因，而预处理事件期间mRNA的<strong>可变剪接</strong>可以产生剪接变体，这些变体在再次胁迫时处于快速响应的待命状态¹。所有这些层面——DNA/组蛋白修饰和基于RNA的调控——相互作用，共同储存胁迫的分子"记忆"。值得注意的是，一些表观遗传印记是短暂的，在种子形成或生长过程中被擦除（以避免在非胁迫条件下产生不必要的胁迫响应），而另一些则足够稳定，可以传递给后代（真正的跨代记忆）⁹。<strong>记忆维持与重置</strong>之间的平衡是一个活跃的研究领域¹⁰,¹¹。</p>
+            
+            <h3>1.2 信号网络和生理记忆 (Signaling Networks and Physiological Memory)</h3>
+            
+            <p>除了染色质和转录变化之外，植物还可以通过信号蛋白水平、代谢物库甚至细胞结构的持久性改变来储存记忆。预处理事件通常导致<strong>胁迫响应蛋白</strong>（如分子伴侣和抗氧化剂）或信号分子的积累，这些分子在胁迫消失后很长时间内仍以较高水平存在，有效地为植物应对未来胁迫"武装"起来⁵。例如，中度热预处理诱导的热激蛋白（HSPs）会保持丰富并准备好在随后发生严重高温时保护蛋白质。类似地，用病原体或害虫进行预处理（在生物胁迫背景下）可以诱导防御酶和激素，使其停留在半激活状态（这种现象称为"激发"免疫）。在非生物胁迫预处理中，植物激素脱落酸（ABA）通常起着核心作用：一次预处理干旱可能导致轻微的ABA积累和ABA信号通路的激活，使得在第二次干旱时气孔关闭反应更快⁴。研究表明，在小麦中，经过干旱预处理的植株在随后的脱水过程中，保卫细胞中的ABA水平和Ca²⁺内流更高，这触发了比未预处理植株<strong>更快的的气孔关闭</strong>⁴。同时，预处理的小麦在复水后表现出更快的的气孔重开，表明作为胁迫记忆一部分的保卫细胞信号调控更为精细⁴。这种动态调整在胁迫下最大限度地减少了水分流失，并在胁迫后迅速恢复气体交换，从而提高了整体适应性。</p>
+            
+            <p>胁迫记忆中另一个重要的信号分子是<strong>活性氧（ROS）</strong>。轻度胁迫可以预先激活植物的抗氧化系统。预处理后，超氧化物歧化酶（SOD）、过氧化氢酶（CAT）和抗坏血酸过氧化物酶（APX）等酶的活性通常会增加，并且编码它们的基因可能表现出低水平的上调，为后续更强的激活做好准备⁵。这导致预处理的植物在随后的胁迫期间积累的破坏性ROS（如过氧化氢）比未处理的植物少，因为它们的抗氧化防御系统启动得更快⁵。例如，据报道，经过干旱预处理的玉米和小麦在第二次干旱时表现出增强的APX活性和谷胱甘肽水平，这与减少的膜损伤和脂质过氧化相关⁵。同样，渗透调节物质如脯氨酸和海藻糖可以在预处理期间积累；这些相容性溶质有助于在后续胁迫期间稳定蛋白质和细胞结构，并且本身也可以作为信号分子⁵。这类保护性代谢物的积累构成了一种提高耐受性的生化记忆。</p>
+            
+            <p>值得注意的是，胁迫记忆也可能具有<strong>发育维度</strong>。早季胁迫可能导致持久的形态或物候变化，影响后期表现。例如，经历干旱的幼苗通常会发展出更深或更具纤维性的根系（可能由ABA和胁迫激素刺激），有效地在其改变的根系结构中"记忆"了水分亏缺⁷。这有助于它们在干旱再次发生时更有效地吸收水分。然而，并非所有的记忆效应对生长都有利——有时存在权衡。如果资源被转移到防御准备上，胁迫记忆可能会以牺牲生长或产量为代价。研究记录了一些案例，其中预处理的植物表现出稍慢的生长或延迟的繁殖，推测是由于维持预处理状态或修复机制的能量成本⁵。例如，由于胁迫记忆导致防御基因的长期表达可能会损害生物量积累（生存与生产力之间的权衡）⁵。育种和生物技术方法将需要管理这种权衡，旨在最大化胁迫恢复力的益处，同时最小化生长损失⁵。</p>
+            
+            <p>总之，通过表观遗传标记、持久性蛋白质/代谢物以及改变的信号通路敏感性的组合，植物保留了有关过去胁迫的信息。当类似的胁迫稍后发生时，这些预处理状态导致<strong>定量和定性上不同的响应</strong>——通常表现为更快的启动、更大的强度以及更协调的防御机制激活⁵。这导致了可观察的表型结果，例如与未预处理的对照相比，预处理植物在胁迫下具有更高的存活率、维持的光合能力和更高的组织含水量⁵,⁷。</p>
+        </div>
+        
+        <div class="section">
+            <h2>2. 胁迫记忆的生理和分子表现 (Physiological and Molecular Manifestations of Stress Memory)</h2>
+            
+            <p>当植物被预处理或拥有胁迫记忆时，其益处可以在多个层面上观察到。<strong>生理学上</strong>，预处理的植物通常能够耐受那些会严重削弱未预处理植物的胁迫条件。一个明显的表现是在干旱期间改善的水分状况。如前所述，经过干旱预处理的植物可以更快地关闭气孔以保存水分，导致在随后的干旱事件中具有更高的叶片相对含水量和更少的萎蔫⁴。它们也可能脱落更少的叶片并维持更长时间的光合作用。在一项田间研究中，经历了早季水分亏缺的作物（玉米和大豆）随后在晚季干旱下表现出比未被预处理的作物更小的产量损失，这表明在整株和农田尺度上存在记忆效应⁷。预处理的作物早期投入了更多的资源用于根系生长，并可能调整了它们的物候（例如加速开花）以应对预期的胁迫⁷。尽管在该案例中产量保护效果不大（约减轻4-7%的损失）⁷，但这说明了胁迫记忆改善农业产出的潜力。</p>
+            
+            <p>在<strong>分子水平</strong>上，预处理植物对胁迫的响应特点是胁迫响应基因的激活更快、更强。例如，在拟南芥中，数十个基因（被称为"可训练"基因）在反复胁迫下表现出增强的转录响应。这些基因包括编码晚期胚胎发生丰富蛋白、脱水蛋白、热激蛋白、像DREB2A这样的转录因子以及各种保护性酶的基因²,³。预处理后，这些基因可能已经以稍高的基础水平表达，或者处于具有活性染色质的待命状态，因此在再次胁迫时它们的mRNA水平上升得更快。这可以通过转录组分析检测到，作为预处理植物的一个显著特征。在蛋白质水平上，预处理植物通常在第二次胁迫来临之前就含有更高水平的某些防御蛋白。例如，发现经过干旱预处理的<strong>小麦</strong>具有更高的抗氧化剂和脱水蛋白基线水平，这有助于在后来的干旱中维持细胞膜的完整性⁵。类似地，经过热预处理的<em>拟南芥</em>保留了更多处于功能状态的热激蛋白，如HSP101，使它们能够在随后的热激中快速重折叠蛋白质³。</p>
+            
+            <p>另一种表现形式是在<strong>信号转导</strong>领域。预处理可以导致信号组分敏感性或丰度的改变。我们看到预处理植物的保卫细胞具有增强的钙离子内流和ABA响应，从而实现更快的的气孔关闭⁴。从更广泛的意义上说，预处理植物可能表现出<strong>"减弱的"激素胁迫响应</strong>，因为它们预先激活了它。例如，未预处理的植物在突发胁迫期间可能会经历胁迫激素（ABA、乙烯）的急剧飙升，导致生长停滞，而预处理的植物可能具有一个温和的、已经在进行的激素响应，从而避免了休克并更优化地调节生长。还有证据表明，对一种类型的胁迫进行预处理可以赋予对共享某些信号通路的不同胁迫的<strong>交叉胁迫耐受性</strong>¹²。一个典型的例子是渗透或盐预处理赋予植物更好的耐旱性，因为这两种胁迫都涉及渗透保护和ABA信号传导。事实上，一项关于水稻的研究表明，在营养生长阶段进行盐预处理，通过调用一组共同的胁迫响应基因和抗氧化反应，提高了灌浆期的抗旱性¹³。这种交叉保护将胁迫记忆的影响扩展到相同胁迫复发之外。</p>
+            
+            <p>在<strong>器官或整株水平</strong>上，形态变化也可以是胁迫记忆的标志。如果一株幼苗经受了冷胁迫（冷驯化），它通常会形成更厚的角质层并积累抗冻糖类——这些修饰会持续存在，并帮助它抵御后来的冰冻事件（这有时被称为冷记忆，尽管是短期的）⁹。反复的机械胁迫（如风或触摸）会导致植株变矮、变粗壮（接触形态建成），这本质上是对机械刺激的一种记忆，通过加固茎秆为未来的风做准备。虽然这些有些不同（因为是持续性刺激），但它们共享一个原则，即过去的暴露改变了未来的响应。</p>
+            
+            <p>总之，<strong>预处理的植物</strong>可以通过其在胁迫下增强的表现来识别：生化上（更低的ROS，更高的保护性化合物），生理上（更好的水分和养分状况，持续的生长），以及分子上（更快的基因激活，改变的信号状态）。这些表现证实了胁迫记忆不仅仅是实验室里的奇特现象，而是一种具有实际意义的真实存在。它们也作为可测量的终点，用于评估给定的预处理或遗传修饰是否成功诱导了记忆效应。</p>
+        </div>
+        
+        <div class="section">
+            <h2>3. 预处理策略及其在农业中的应用 (Priming Strategies and Applications in Agriculture)</h2>
+            
+            <p>通过<strong>预处理技术</strong>利用胁迫记忆是提高作物恢复力的一种有前景的方法。预处理可以通过多种策略实现：</p>
+            
+            <p>-   <strong>非生物胁迫预暴露（驯化/硬化）：</strong> 这涉及有意地将植物暴露于轻度胁迫以触发适应。例如，<em>干旱预处理</em>（扣水直到植物经历轻度水分亏缺）可以增加它们后来的耐旱性⁷。农民有时在生长季早期采用亏缺灌溉作为一种驯化形式。<em>热预处理</em>（将植物或幼苗暴露于亚致死高温）在温室苗圃中用于为田间热浪准备幼苗。冬季作物的<em>冷驯化</em>（逐渐暴露于低、非冰冻温度）是一种自然的预处理，通过FLC位点的春化记忆等机制增加抗寒性⁹。这些物理预处理方法本质上是"训练"作物，就像疫苗一样，激活防御反应并发展出持续到胁迫易发期的记忆。</p>
+            
+            <p>-   <strong>化学预处理：</strong> 多种化学物质可以在不引起严重胁迫的情况下诱导植物进入预处理状态。例如，用低浓度的<strong>水杨酸（SA）</strong>或<strong>茉莉酸（JA）</strong>——与胁迫和防御相关的激素——处理，可以通过预先激活防御途径，使植物更好地抵抗随后的干旱或病原体攻击⁶。<strong>脱落酸（ABA）</strong>本身可以以控制剂量使用，以关闭气孔并为植物应对水分亏缺做准备（尽管ABA可能抑制生长，因此其使用需要权衡）。另一种有效的预处理剂是<strong>β-氨基丁酸（BABA）</strong>，一种非蛋白质氨基酸。BABA不直接缓解胁迫，而是"警告"植物即将到来的胁迫，导致一种节能的准备状态⁶。研究表明，BABA可以激发广谱防御——它可以通过诱导ABA和SA/JA介导的过程，提高亚麻和玉米的耐旱性以及对某些病原体的抗性⁶。同样，<strong>过氧化氢（H₂O₂）</strong>或其他温和的氧化剂可以被用来触发抗氧化防御（有时称为氧化预处理）¹⁴。甚至营养物质或温和的渗透剂（例如甘露醇或盐预处理）也可以通过激活渗透胁迫响应而充当预处理剂，而不会造成持久的伤害。关键在于这些处理引发了一系列分子变化——从像Ca²⁺和ROS这样的第二信使到基因表达变化——留下了一个类似于自然轻度胁迫的持久印记。</p>
+            
+            <p>-   <strong>生物预处理：</strong> 有益微生物也可以激发植物的胁迫响应。某些促进植物生长的根际细菌（PGPR）和菌根真菌已知可以诱导对胁迫的系统性耐受。例如，研究发现某些<em>木霉属</em>真菌的定殖可以通过刺激植物的免疫系统和抗氧化能力，激发水稻和小麦等作物增强对干旱和病害的耐受性¹⁵。在一项研究中，即使后来没有真菌存在，<em>木霉</em>预处理的小麦在干旱条件下也表现出改善的生长和防御酶活性，表明存在持久的预处理效应。类似地，用PGPR（如<em>芽孢杆菌属</em>或<em>假单胞菌属</em>的菌株）进行种子处理可以导致诱导系统抗性或耐受性，本质上是给幼苗"接种疫苗"。这些生物方法对可持续农业很有吸引力，因为它们是自然的，并且可以与其他益处（如改善养分吸收）相结合。</p>
+            
+            <p>-   <strong>种子预处理：</strong> 这是一种农业实践，即在播种前对种子进行水合或用某些溶液处理。<strong>水分预处理</strong>（将种子浸泡在水中然后重新干燥）允许种子吸水并启动早期代谢过程而无需实际萌发，这通常导致在田间更快、更同步的萌发，并可以提高胁迫条件下的幼苗活力¹⁶。<strong>渗透预处理</strong>（将种子浸泡在渗透溶液如PEG或盐溶液中）可以通过以受控方式对种子进行预胁迫来诱导对盐碱或干旱的耐受性¹⁷。种子也可以用营养物质（例如锌溶液）或保护性化合物（如海藻糖、脯氨酸）进行预处理，以增强其胁迫响应。甚至<strong>对种子或体细胞胚进行热预处理</strong>也已进行了测试；例如，在50°C下对松树体细胞胚进行预处理，通过在胚胎发生过程中触发胁迫响应途径，提高了其随后的耐旱和耐热性¹⁸。预处理的种子在萌发时通常表现出更高的抗氧化剂水平和胁迫相关转录本，为幼苗应对恶劣环境做好准备。</p>
+            
+            <p>在农业中应用预处理时，时间和强度至关重要。预处理的胁迫或处理必须足够温和，以免造成持久损害，但又足以激活植物的防御记忆。还有一个时间方面的问题：胁迫记忆会随着时间的推移而减弱，因此预处理与实际胁迫之间的时间间隔很重要。一些预处理效果持续数周，另一些可以持续数月，如果涉及跨代机制，甚至可以持续到下一代⁵。农民需要在战略性的生长阶段（例如种子或幼苗阶段，或在预期的胁迫期之前）进行预处理。对于多年生作物，淡季的预处理可能会将益处带入生长季节。</p>
+            
+            <p>从育种和生物技术的角度来看，另一个应用是开发天生表现出强大胁迫记忆或易于被预处理（有时称为"胁迫记忆可塑性"）的品种。自然变异是存在的——一些基因型比其他基因型表现出更好的"训练"响应¹⁹。育种家可以通过在重复胁迫周期下评估品系来选择这些性状。此外，理解分子机制为基因工程打开了大门：例如，过表达像HSFA2这样的<strong>记忆相关基因</strong>或染色质修饰因子可以增强植物保留胁迫印记的能力³。相反，敲除"记忆抑制因子"（如主动重置胁迫记忆的<strong>FORGETTER</strong>蛋白）可能会延长记忆效应⁹。然而，必须谨慎行事，因为需要记忆和重置之间的平衡，以避免在胁迫条件实际未复发时产生负面影响。</p>
+            
+            <p>在实践中，一些预处理技术已经在测试中：例如，在水稻中使用SA或硅的叶面喷施以提高耐旱性，用硒对藜麦进行种子预处理以应对干旱（提高产量）²⁰，以及控制土壤干燥来硬化番茄移栽苗。随着研究的进展，我们可能会看到<strong>"记忆增强型"作物</strong>，它们结合了遗传倾向和管理实践，以更好地应对气候挑战。</p>
+        </div>
+        
+        <div class="section">
+            <h2>结论 (Conclusion)</h2>
+            
+            <p>过去十年的研究极大地增进了我们对植物胁迫记忆和预处理的理解。现在很清楚，植物在面对反复胁迫时并非被动——它们可以基于过去的经验主动<strong>适应</strong>，利用一套分子机制来储存和回忆胁迫信息。在阐明表观遗传标记和特定转录因子作为胁迫记忆基础方面取得了关键进展（例如，确定了HSFA2/HSFA3复合物用于热记忆³，或水稻中干旱记忆的特定DNA甲基化模式⁵）。科学家们也开始绘制维持或擦除这些记忆的调控网络，例如某些染色质重塑因子如何在种子发育过程中重置表观遗传状态（确保后代在很大程度上是"全新的"，除非发生有意的表观遗传）⁹。在应用方面，农学家正在试验预处理方法——从干旱预处理到化学预处理——并看到了在胁迫恢复力方面的实际益处⁷。</p>
+            
+            <p>然而，仍然存在一些<strong>挑战和悬而未决的问题</strong>。一个挑战是理解胁迫记忆的长期稳定性和<strong>维持机制</strong>。虽然我们知道一些记忆是如何形成的，但我们对它们如何通过细胞分裂持续存在，或者如何忠实地传递给后代（如果能传递的话）知之甚少⁹。许多表观遗传标记的短暂性表明存在活跃的记忆维持机制，这些机制才刚刚开始被识别¹⁹。另一个挑战是<strong>权衡</strong>问题：投入用于维持预处理状态的资源可能会影响生长或繁殖。例如，一个"记住"了胁迫的植物可能会持续表达稍高水平的防御物质，可能导致产量降低。事实上，胁迫记忆虽然对生存具有适应性，但在某些情况下与生长速率降低有关⁵。未来的研究必须解决如何<strong>将有益的记忆效应与有害的成本解耦</strong>——也许可以通过精确控制记忆激活的时间和地点。</p>
+            
+            <p>还有<strong>特异性和交叉对话</strong>的问题：对一种类型胁迫（比如干旱）的记忆是否会干扰或增强对另一种胁迫（如高温）的响应？一些研究表明存在正向交叉对话（一种预处理可以增强多种耐受性¹²），而另一些研究则显示可能存在冲突（为病原体防御进行的预处理可能使植物过敏，从而降低对非生物胁迫的耐受性）。一个整体性的理解将需要整合激素信号网络和转录调控的知识。</p>
+            
+            <p>展望未来，植物胁迫记忆领域有望受益于新技术。<strong>表观基因组编辑</strong>工具可以让科学家创建或擦除特定的表观遗传标记，有效地随意"安装"记忆以测试其影响。高通量表型分析和组学技术可以帮助识别新的记忆基因和指示预处理状态的生物标志物。从作物改良的角度来看，育种家除了进行遗传选择外，还可以使用表观基因组选择——例如，不仅筛选遗传性状，还筛选理想的胁迫记忆特征（如预处理后快速诱导保护性基因的能力）。人们也对开发对农民来说实用且能在无害情况下诱导持久记忆的处理方法（生物刺激素、预处理剂的纳米制剂等）感兴趣。</p>
+            
+            <p>总之，植物胁迫记忆和预处理代表了植物生理学、遗传学和生态学的一个引人入胜的交叉点，对气候不稳定时代的农业具有重要意义。通过继续揭示胁迫记忆的分子基础，并通过创新方法来利用它，我们离培育出能够<strong>以过去的经验教训抵御未来胁迫"回声"</strong>的作物更近了一步⁷。为作物进行恢复力预处理——有效地赋予它们一种针对非生物逆境的"植物免疫力"——的能力，可能成为未来几年可持续农业和全球粮食安全战略的关键组成部分。</p>
+        </div>
+        
+        <div class="references">
+            <h2>参考文献 (References)</h2>
+            
+            <ol>
+                <li>Frontiers | The multifaceted role of RNA-based regulation in plant stress memory. <em>Frontiers in Plant Science</em>. <a href="https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1387575/full" target="_blank">https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1387575/full</a></li>
+                <li>Ding Y, Fromm M, Avramova Z. Multiple exposures to drought 'train' transcriptional responses in Arabidopsis. <em>Nature Communications</em>. 2012;3:740. <a href="https://www.nature.com/articles/ncomms1732" target="_blank">https://www.nature.com/articles/ncomms1732</a></li>
+                <li>Friedrich T, et al. Heteromeric HSFA2/HSFA3 complexes drive transcriptional memory after heat stress in Arabidopsis. <em>Nature Communications</em>. 2021;12:3419. <a href="https://www.nature.com/articles/s41467-021-23786-6" target="_blank">https://www.nature.com/articles/s41467-021-23786-6</a></li>
+                <li>Wang Y, et al. Drought priming mechanisms in wheat elucidated by in-situ determination of dynamic stomatal behavior. <em>Plant Physiology and Biochemistry</em>. 2023;196:708-719. (PMC9983753). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9983753/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC9983753/</a></li>
+                <li>Godwin J, Farrona S. Stress memory and its regulation in plants experiencing recurrent drought conditions. <em>Journal of Experimental Botany</em>. 2023;74(9):2713-2726. (PMC9928933). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9928933/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC9928933/</a></li>
+                <li>Parvin K, et al. Emerging Trends in Non-Protein Amino Acids as Potential Priming Agents: Implications for Stress Management Strategies and Unveiling Their Regulatory Functions. <em>International Journal of Molecular Sciences</em>. 2024;25(10):5463. (PMC11172521). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11172521/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC11172521/</a></li>
+                <li>Liu Y, et al. Drought imprints on crops can reduce yield loss: Nature's insights for food security. <em>Food and Energy Security</em>. 2022;11(3):e375. (PMC9285083). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9285083/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC9285083/</a></li>
+                <li>Godwin J, Farrona S. Stress memory and its regulation in plants experiencing recurrent drought conditions. <em>Journal of Experimental Botany</em>. 2023;74(9):2713-2726. PubMed PMID: 36788199. <a href="https://pubmed.ncbi.nlm.nih.gov/36788199/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/36788199/</a></li>
+                <li>Frontiers | Epigenetic stress memory: A new approach to study cold and heat stress responses in plants. <em>Frontiers in Plant Science</em>. 2022;13:1075279. <a href="https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.1075279/full" target="_blank">https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.1075279/full</a></li>
+                <li>Stress resilience in plants: the complex interplay between heat stress memory and resetting. <em>ResearchGate</em>. <a href="https://www.researchgate.net/publication/388319926_Stress_resilience_in_plants_the_complex_interplay_between_heat_stress_memory_and_resetting" target="_blank">https://www.researchgate.net/publication/388319926_Stress_resilience_in_plants_the_complex_interplay_between_heat_stress_memory_and_resetting</a></li>
+                <li>Autophagy: a key player in the recovery of plants from heat stress. <em>Journal of Experimental Botany</em>. 2024;75(8):2246-2258. <a href="https://academic.oup.com/jxb/article/75/8/2246/7571303" target="_blank">https://academic.oup.com/jxb/article/75/8/2246/7571303</a></li>
+                <li>Hilker M, et al. Priming crops for the future: rewiring stress memory. <em>Trends in Plant Science</em>. 2022;27(3):283-296. PubMed PMID: 34906381. <a href="https://pubmed.ncbi.nlm.nih.gov/34906381/" target="_blank">https://pubmed.ncbi.nlm.nih.gov/34906381/</a></li>
+                <li>Cross-stress memory: Salt priming at vegetative growth stages enhances drought tolerance during grain filling stages in rice. <em>Environmental and Experimental Botany</em>. 2023;205:105140. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0098847222004099" target="_blank">https://www.sciencedirect.com/science/article/abs/pii/S0098847222004099</a></li>
+                <li>Biostimulation, drought tolerance and DNA methylation profile with H₂O₂ priming in maize seedlings. <em>Environmental and Experimental Botany</em>. 2024;223:105775. <a href="https://www.sciencedirect.com/science/article/abs/pii/S009884722400217X" target="_blank">https://www.sciencedirect.com/science/article/abs/pii/S009884722400217X</a></li>
+                <li>Guardians of wheat: Unleashing transgenerational immune priming through Trichoderma-mediated epigenetic modifications. <em>Biocatalysis and Agricultural Biotechnology</em>. 2024;58:103234. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0254629924002606" target="_blank">https://www.sciencedirect.com/science/article/abs/pii/S0254629924002606</a></li>
+                <li>Seed Priming: A Feasible Strategy to Enhance Drought Tolerance in Crop Plants. <em>ResearchGate</em>. <a href="https://www.researchgate.net/publication/346321353_Seed_Priming_A_Feasible_Strategy_to_Enhance_Drought_Tolerance_in_Crop_Plants" target="_blank">https://www.researchgate.net/publication/346321353_Seed_Priming_A_Feasible_Strategy_to_Enhance_Drought_Tolerance_in_Crop_Plants</a></li>
+                <li>The Utilization of Seed Priming as a Tool to Overcome Salt and Drought Stress in Crops: Advantages and Disadvantages. <em>Seeds</em>. 2023;2(3):357-377. <a href="https://art.torvergata.it/retrieve/8fddab11-6fac-49a5-b90b-2e72cc1b6c9f/Review%20Seed%20Priming%20seeds-2023.pdf" target="_blank">https://art.torvergata.it/retrieve/8fddab11-6fac-49a5-b90b-2e72cc1b6c9f/Review%20Seed%20Priming%20seeds-2023.pdf</a></li>
+                <li>Priming Maritime Pine Megagametophytes during Somatic Embryogenesis with High Temperature Improves Plant Thermotolerance. <em>Plants (Basel)</em>. 2021;10(3):446. <a href="https://www.mdpi.com/2223-7747/10/3/446" target="_blank">https://www.mdpi.com/2223-7747/10/3/446</a></li>
+                <li>Bäurle I. Maintenance of abiotic stress memory in plants: Lessons learned from heat acclimation. <em>Plant Cell & Environment</em>. 2023;46(4):1061-1073. (PMC9806581). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9806581/" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC9806581/</a></li>
+                <li>Seed priming with selenium improves growth and yield of quinoa under drought conditions. <em>Scientific Reports</em>. 2024;14:1101. <a href="https://www.nature.com/articles/s41598-024-51371-6" target="_blank">https://www.nature.com/articles/s41598-024-51371-6</a></li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 植物胁迫记忆和预处理的分子机制 | 文档最后更新于：2025年4月26日</p>
+    </div>
+</body>
+</html>
